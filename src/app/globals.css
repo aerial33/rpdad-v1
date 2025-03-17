@@ -220,4 +220,8 @@
   h6 {
     font-family: var(--font-nunito);
   }
+
+  .gradient-primary {
+    @apply from-primary-light to-primary-dark bg-gradient-to-bl bg-clip-text text-transparent;
+  }
 }

@@ -1,11 +1,17 @@
+import { RpdadLogo } from "@/components/LogoRpdad/logo"
 import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div className="container flex h-screen flex-col items-center justify-center gap-4">
-      <h1 className="text-4xl font-bold">RPDAD</h1>
+    <div className="flex h-screen flex-col items-center justify-center gap-4">
+      <div>
+        <RpdadLogo />
+      </div>
+      <h1 className="gradient-primary text-6xl font-bold">RPDAD</h1>
       <p className="text-lg">
-        RPDAD is a project that allows you to create and manage your own RPDAD.
+        RPDAD is a project that allows you{" "}
+        <span className="text-primary">to create</span> and manage your own
+        RPDAD.
       </p>
       <div className="flex gap-4">
         <Button>Get Started</Button>
