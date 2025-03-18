@@ -190,7 +190,7 @@ export function FooterMedium({ className }: FooterProps) {
                 href="#"
                 className="text-muted-foreground hover:text-primary text-sm transition-colors"
               >
-                Conditions d'utilisation
+                Conditions d&apos;utilisation
               </Link>
               <Link
                 href="#"

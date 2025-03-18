@@ -3,35 +3,35 @@ import { Facebook, Linkedin, Youtube } from "lucide-react"
 import { RpdadLogo } from "@/components/LogoRpdad/logo"
 import { navItems } from "@/data/nav-items"
 
-const sections = [
-  {
-    title: "Product",
-    links: [
-      { name: "Overview", href: "#" },
-      { name: "Pricing", href: "#" },
-      { name: "Marketplace", href: "#" },
-      { name: "Features", href: "#" },
-    ],
-  },
-  {
-    title: "Company",
-    links: [
-      { name: "About", href: "#" },
-      { name: "Team", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Careers", href: "#" },
-    ],
-  },
-  {
-    title: "Resources",
-    links: [
-      { name: "Help", href: "#" },
-      { name: "Sales", href: "#" },
-      { name: "Advertise", href: "#" },
-      { name: "Privacy", href: "#" },
-    ],
-  },
-]
+// const sections = [
+//   {
+//     title: "Product",
+//     links: [
+//       { name: "Overview", href: "#" },
+//       { name: "Pricing", href: "#" },
+//       { name: "Marketplace", href: "#" },
+//       { name: "Features", href: "#" },
+//     ],
+//   },
+//   {
+//     title: "Company",
+//     links: [
+//       { name: "About", href: "#" },
+//       { name: "Team", href: "#" },
+//       { name: "Blog", href: "#" },
+//       { name: "Careers", href: "#" },
+//     ],
+//   },
+//   {
+//     title: "Resources",
+//     links: [
+//       { name: "Help", href: "#" },
+//       { name: "Sales", href: "#" },
+//       { name: "Advertise", href: "#" },
+//       { name: "Privacy", href: "#" },
+//     ],
+//   },
+// ]
 
 export const Footer = () => {
   return (
@@ -41,7 +41,8 @@ export const Footer = () => {
           <div>
             <RpdadLogo height={90} className="m-auto lg:m-0" />
             <p className="gradient-secondary text-lg font-semibold">
-              Réseau Public Départemental <br /> d'Aide à Domicile de la Gironde
+              Réseau Public Départemental <br /> d&apos;Aide à Domicile de la
+              Gironde
             </p>
             <p className="text-muted-foreground mt-6 text-sm">
               Aide à la vie quotidienne pour les personnes âgées ou en situation

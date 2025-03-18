@@ -24,7 +24,7 @@ export function HeroSplit() {
             <p className="text-muted-foreground max-w-md text-lg">
               Notre plateforme vous fournit tout ce dont vous avez besoin pour
               créer des applications exceptionnelles que vos utilisateurs
-              adoreront. Commencez à construire dès aujourd'hui.
+              adoreront. Commencez à construire dès aujourd&apos;hui.
             </p>
 
             <div className="mt-2 flex flex-wrap gap-4">

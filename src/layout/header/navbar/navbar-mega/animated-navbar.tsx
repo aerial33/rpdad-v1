@@ -132,13 +132,23 @@ export const ProductItem = ({
 }
 
 // Composant HoveredLink - Lien avec effet de survol personnalisé
-export const HoveredLink = ({ children, link, ...rest }: any) => {
+export const HoveredLink = ({
+  children,
+  link,
+  onMouseEnter,
+  ...rest
+}: {
+  children: React.ReactNode
+  link: string
+  onMouseEnter?: () => void
+}) => {
   const pathname = usePathname()
   const isActive = pathname === link
   return (
     <Link
       {...rest}
       href={link}
+      onMouseEnter={onMouseEnter}
       className={cn("group relative py-2 transition lg:px-2", {
         "text-primary font-bold": isActive,
         "theme-dark:text-gray-400 hover:text-primary text-gray-500": !isActive,
