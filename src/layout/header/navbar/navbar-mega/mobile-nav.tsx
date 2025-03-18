@@ -26,7 +26,7 @@ export function MobileMenu() {
   }
 
   return (
-    <div className="lg:hidden">
+    <div className="flex lg:hidden">
       {/* Bouton d'ouverture du menu */}
       <button
         onClick={toggleMenu}

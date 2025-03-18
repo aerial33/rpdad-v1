@@ -1,9 +1,11 @@
 import { RpdadLogo } from "@/components/LogoRpdad/logo"
 import { Button } from "@/components/ui/button"
+import { HeroSelector } from "@/sections/Hero"
 
 export default function Home() {
   return (
     <main className="flex flex-1 flex-col items-center justify-center gap-4">
+      <HeroSelector variant="img-grid" />
       <div>
         <RpdadLogo />
       </div>

@@ -1,10 +1,8 @@
-import Link from "next/link"
-
 //todo: make CTA button dynamic
 //todo: adapt to the other mobile nav
+import { Facebook, Linkedin, Youtube } from "lucide-react"
 
 import { RpdadLogo } from "@/components/LogoRpdad/logo"
-import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 import { NavbarSelectorProps } from "./navbar"
@@ -35,10 +33,24 @@ export const Header = ({
           {...navbarProps}
           className="hidden lg:flex"
         />
-        <div className="flex items-center gap-2">
-          <Button variant={"outline"}>
-            <Link href="#">Contactez-nous</Link>
-          </Button>
+        <div className="flex items-center gap-8">
+          <ul className="text-muted-foreground flex items-center space-x-6">
+            <li className="hover:text-primary font-medium">
+              <a href="#">
+                <Facebook className="size-6" />
+              </a>
+            </li>
+            <li className="hover:text-primary font-medium">
+              <a href="#">
+                <Youtube className="size-6" />
+              </a>
+            </li>
+            <li className="hover:text-primary font-medium">
+              <a href="#">
+                <Linkedin className="size-6" />
+              </a>
+            </li>
+          </ul>
           <MobileMenu />
           {/* <CTA label="Contactez-nous" link="/contact" variant="default" /> */}
         </div>

@@ -1,6 +1,7 @@
 import { Facebook, Linkedin, Youtube } from "lucide-react"
 
 import { RpdadLogo } from "@/components/LogoRpdad/logo"
+import { navItems } from "@/data/nav-items"
 
 const sections = [
   {
@@ -65,16 +66,14 @@ export const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="grid grid-cols-3 gap-6 lg:gap-20">
-          {sections.map((section, sectionIdx) => (
+        <div className="grid grid-cols-4 gap-6 lg:gap-20">
+          {navItems.map((section, sectionIdx) => (
             <div key={sectionIdx}>
-              <h3 className="mb-6 font-bold">{section.title}</h3>
+              <h3 className="mb-6 font-bold">{section.label}</h3>
               <ul className="text-muted-foreground space-y-4 text-sm">
-                {section.links.map((link, linkIdx) => (
-                  <li key={linkIdx} className="hover:text-primary font-medium">
-                    <a href={link.href}>{link.name}</a>
-                  </li>
-                ))}
+                <li key={sectionIdx} className="hover:text-primary font-medium">
+                  <a href={section.path}>{section.label}</a>
+                </li>
               </ul>
             </div>
           ))}
