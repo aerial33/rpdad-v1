@@ -15,12 +15,14 @@ const Hero = () => {
         <div className="container grid grid-cols-1 gap-4 px-4 md:px-0 lg:grid-cols-4 lg:gap-8">
           <div className="mb-8 self-end lg:col-span-2 lg:col-end-3 lg:mb-0">
             <div className="mb-8 flex flex-col">
-              <div className="text-thicc-bold text-flamingo text-sm tracking-tight">
+              <div className="text-flamingo mb-2 text-sm font-semibold tracking-tight">
                 Un service proche de chez vous
               </div>
               <h1 className="text-4xl leading-snug font-bold text-gray-800 lg:text-5xl lg:leading-tight">
-                Premier Réseau Public Départemental d'aide à domicile de la
-                Gironde
+                Premier <span className="gradient-primary">Réseau </span>Public
+                Départemental{" "}
+                <span className="gradient-primary">d'aide à domicile</span> de
+                la Gironde
               </h1>
               <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-xl">
                 Branche médico-sociale de l'UDCCAS 33 (Union Départementale des
