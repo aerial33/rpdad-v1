@@ -1,6 +1,9 @@
 import type { Metadata } from "next"
 import { Lexend_Deca, Nunito } from "next/font/google"
 
+import { Footer } from "@/layout/footer"
+import { Header } from "@/layout/header/header"
+
 import "./globals.css"
 
 const lexendDeca = Lexend_Deca({
@@ -29,8 +32,12 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="/icon.svg" />
       </head>
-      <body className={`${lexendDeca.variable} ${nunito.variable} antialiased`}>
+      <body
+        className={`${lexendDeca.variable} ${nunito.variable} flex min-h-screen flex-col antialiased`}
+      >
+        <Header navbarVariant="mega" />
         {children}
+        <Footer />
       </body>
     </html>
   )
