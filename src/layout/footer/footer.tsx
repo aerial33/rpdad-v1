@@ -36,7 +36,7 @@ import { navItems } from "@/data/nav-items"
 export const Footer = () => {
   return (
     <footer className="center-element py-12 md:pt-16">
-      <div className="flex flex-col items-center justify-between gap-10 text-center lg:flex-row lg:text-left">
+      <div className="flex flex-col items-center justify-between gap-10 border-t border-gray-200 text-center lg:flex-row lg:text-left">
         <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
           <div>
             <RpdadLogo height={90} className="m-auto lg:m-0" />

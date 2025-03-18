@@ -24,7 +24,7 @@ const Hero = () => {
                 <span className="gradient-primary">d&apos;aide à domicile</span>{" "}
                 de la Gironde
               </h1>
-              <p className="py-5 text-xl leading-normal text-gray-500 lg:text-xl xl:text-xl">
+              <p className="py-5 text-lg leading-normal text-gray-500 lg:text-xl xl:text-xl">
                 Branche médico-sociale de l&apos;UDCCAS 33 (Union Départementale
                 des Centres Communaux d&apos;Action Sociale de la Gironde){" "}
                 <br />
