@@ -224,4 +224,14 @@
   .gradient-primary {
     @apply from-primary-light to-primary-dark bg-gradient-to-bl bg-clip-text text-transparent;
   }
+
+  .gradient-secondary {
+    @apply from-primary-light to-flamingo bg-gradient-to-r bg-clip-text text-transparent;
+  }
+}
+
+@layer utilities {
+  .center-element {
+    @apply container mx-auto px-4 xl:px-0;
+  }
 }
