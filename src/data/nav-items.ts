@@ -25,7 +25,7 @@ export const megaNavItems = [
   },
   {
     id: 2,
-    label: "Produits",
+    label: "Services",
     subMenus: [
       {
         title: "Produits Vedettes",
@@ -68,7 +68,7 @@ export const megaNavItems = [
   },
   {
     id: 3,
-    label: "Solutions",
+    label: "Le RPDAD",
     subMenus: [
       {
         title: "Pour les Équipes",
@@ -104,12 +104,12 @@ export const megaNavItems = [
   },
   {
     id: 4,
-    label: "Blog",
+    label: "Actualités",
     link: "/posts",
   },
   {
     id: 5,
-    label: "Framer Motion",
+    label: "Services membres",
     link: "/framer-motion",
   },
 ]
