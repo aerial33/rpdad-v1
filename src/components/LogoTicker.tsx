@@ -2,13 +2,15 @@ import { motion } from "framer-motion"
 
 import Image from "next/image"
 
+import { Badge } from "./ui/badge"
+
 export const LogoTicker = () => {
   return (
     <>
-      <div className="mt-12 mb-4">
-        <h3 className="text-left text-xl font-semibold text-gray-600">
+      <div className="mt-12">
+        <Badge variant="outline" className="text-md">
           Nos Partenaires
-        </h3>
+        </Badge>
       </div>
       <div className="relative overflow-x-hidden p-4">
         <div className="mb-4 flex items-center">

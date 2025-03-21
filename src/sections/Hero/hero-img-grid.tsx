@@ -6,15 +6,16 @@ import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 
 import { LogoTicker } from "@/components/LogoTicker"
+import { FadeUp } from "@/components/motion/animations"
 import { Button } from "@/components/ui/button"
 
 const Hero = () => {
   return (
     <>
-      <section className="py-12 md:py-24">
+      <section className="py-12 md:pt-24">
         <div className="container grid grid-cols-1 gap-4 px-4 md:px-0 lg:grid-cols-4 lg:gap-8">
           <div className="mb-8 self-end lg:col-span-2 lg:col-end-3 lg:mb-0">
-            <div className="mb-8 flex flex-col">
+            <FadeUp className="mb-8 flex flex-col">
               <div className="text-flamingo mb-2 text-sm font-semibold tracking-tight">
                 Un service proche de chez vous
               </div>
@@ -43,7 +44,7 @@ const Hero = () => {
                 </Button>
               </div>
               <LogoTicker />
-            </div>
+            </FadeUp>
           </div>
           <div className="lg:col-span-2 lg:col-end-5">
             <div className="relative">

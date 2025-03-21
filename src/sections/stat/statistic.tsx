@@ -8,15 +8,15 @@ interface StatProps {
 
 function Stat({ value, label, showDot = false }: StatProps) {
   return (
-    <div className="">
-      <div className="gradient-primary mb-2 text-2xl font-bold md:text-3xl xl:text-4xl">
+    <div className="relative text-center lg:text-left">
+      <div className="gradient-primary mb-2 text-3xl font-bold xl:text-4xl">
         {value}
       </div>
       <div className="text-left text-xs tracking-wider text-gray-500">
         {label}
       </div>
       {showDot && (
-        <div className="absolute top-1/2 -right-4 hidden h-2 w-2 -translate-y-1/2 transform rounded-full bg-pink-500 lg:block" />
+        <div className="bg-flamingo-light absolute top-1/2 hidden h-4 w-4 translate-y-2 transform rounded-full md:-right-12 md:block lg:-right-5" />
       )}
     </div>
   )
@@ -24,7 +24,7 @@ function Stat({ value, label, showDot = false }: StatProps) {
 
 export default function StatisticSection() {
   return (
-    <section className="grid grid-cols-1 gap-6 md:grid-cols-2 md:gap-16">
+    <section className="grid grid-cols-1 gap-6 py-12 md:gap-16 lg:grid-cols-2">
       <div className="relative overflow-hidden rounded-2xl">
         <iframe
           className="aspect-video h-full w-full"
@@ -41,7 +41,7 @@ export default function StatisticSection() {
           <div className="bg-primary h-60 w-1" />
           <div className="flex flex-col gap-4">
             <Badge className="font-medium text-white">Editorial</Badge>
-            <h2 className="text-3xl font-bold text-balance text-gray-800 md:text-4xl">
+            <h2 className="text-gray-800">
               {"Se fédérer pour exister, résister, s'améliorer et innover"}
             </h2>
 
@@ -54,13 +54,9 @@ export default function StatisticSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-12 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 lg:justify-items-start xl:grid-cols-4">
           <Stat value="32" label="CCAS et CIAS membres" showDot={true} />
-          <Stat
-            value="+1200"
-            label="Professionnels de terrain"
-            showDot={true}
-          />
+          <Stat value="+1200" label="Professionnels de terrain" />
           <Stat value="700 000" label="Heures réalisées" showDot={true} />
           <Stat value="192" label="Communes d'intervention" />
         </div>
