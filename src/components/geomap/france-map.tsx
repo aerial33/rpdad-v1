@@ -4,6 +4,8 @@ import * as d3 from "d3"
 
 import { useEffect, useRef, useState } from "react"
 
+import { CantonProperties } from "@/sections/map/map-gironde"
+
 // Définition des types
 interface GeoFeature {
   type: "Feature"
@@ -35,7 +37,7 @@ interface GeoMapProps {
   idField?: string
   nameField?: string
   highlightedAreaId?: string | null
-  onAreaClick?: (id: string, name: string, extraData?: any) => void
+  onAreaClick?: (id: string, name: string, extraData?: CantonProperties) => void
   defaultFill?: string
   highlightFill?: string
   hoverFill?: string
@@ -146,7 +148,10 @@ const GeoMap = ({
         if (onAreaClick) {
           const id = d.properties[idField] || d.id
           const name = d.properties[nameField]
-          onAreaClick(id, name, d.properties)
+          onAreaClick(id, name, {
+            code: d.properties[idField] || d.id,
+            nom: d.properties[nameField],
+          })
         }
       })
   }, [

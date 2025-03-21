@@ -9,7 +9,7 @@ import { FadeUp } from "@/components/motion/animations"
 import { Badge } from "@/components/ui/badge"
 
 // Définir une interface pour les propriétés du canton
-interface CantonProperties {
+export interface CantonProperties {
   code: string
   nom: string
   villes?: string[]
@@ -61,8 +61,8 @@ export default function MapGirondeSection() {
             }
           </p>
           <ul className="mt-4 list-disc pl-5 text-gray-500">
-            <li>Centres Communaux d'Action Sociale (CCAS)</li>
-            <li>Centres Intercommunaux d'Action Sociale (CIAS)</li>
+            <li>{"Centres Communaux d'Action Sociale (CCAS)"}</li>
+            <li>{"Centres Intercommunaux d'Action Sociale (CIAS)"}</li>
           </ul>
           {selectedArea && (
             <motion.div
