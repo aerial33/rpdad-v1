@@ -151,6 +151,7 @@ const GeoMap = ({
           onAreaClick(id, name, {
             code: d.properties[idField] || d.id,
             nom: d.properties[nameField],
+            villes: d.properties.villes,
           })
         }
       })
