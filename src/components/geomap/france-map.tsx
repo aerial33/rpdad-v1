@@ -142,8 +142,7 @@ const GeoMap = ({
           setTooltipData(null)
         }
       )
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      .on("click", function (event: MouseEvent, d: GeoFeature) {
+      .on("click", (event: MouseEvent, d: GeoFeature) => {
         if (onAreaClick) {
           const id = d.properties[idField] || d.id
           const name = d.properties[nameField]
