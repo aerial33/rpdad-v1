@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, LucideIcon } from "lucide-react"
 
 import { ReactNode } from "react"
 
@@ -38,7 +38,7 @@ const BentoCard = ({
   name: string
   className: string
   background: ReactNode
-  Icon: any
+  Icon: LucideIcon
   description: string
   href: string
   cta: string
@@ -57,7 +57,7 @@ const BentoCard = ({
   >
     <div>{background}</div>
     <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-4 p-6 transition-all duration-300 group-hover:-translate-y-10 lg:pl-24">
-      <Icon className="h-12 w-12 origin-left transform-gpu text-neutral-700 transition-all duration-300 ease-in-out group-hover:scale-75" />
+      <Icon className="h-12 w-12 origin-left transform-gpu text-gray-400 transition-all duration-300 ease-in-out group-hover:scale-75" />
       {tag && (
         <Badge
           variant={"outline"}
@@ -66,10 +66,10 @@ const BentoCard = ({
           {tag}
         </Badge>
       )}
-      <h3 className="text-3xl font-bold text-balance text-white lg:text-4xl dark:text-neutral-300">
+      <h3 className="text-3xl font-bold text-balance text-gray-600 lg:text-4xl dark:text-neutral-300">
         {name}
       </h3>
-      <p className="text-balance text-neutral-400">{description}</p>
+      <p className="text-balance text-neutral-700">{description}</p>
     </div>
 
     <div

@@ -4,7 +4,7 @@ import { BentoCard, BentoGrid } from "@/components/ui/bento-grid"
 
 const features = [
   {
-    Icon: FileText,
+    Icon: Globe,
     tag: "Le réseau en Gironde",
     name: "Un Service public proche de chez vous",
     description:
@@ -13,7 +13,7 @@ const features = [
     cta: "Découvrer nos engagements",
     background: <img className="absolute -top-20 -right-20 opacity-60" />,
     className:
-      "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-3 bg-primary-lighter lg:rounded-tl-[300px]",
+      "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-3 bg-primary lg:rounded-tl-[300px] text-white",
   },
   {
     Icon: Mail,
@@ -26,7 +26,7 @@ const features = [
       "lg:col-start-3 lg:col-end-4 lg:row-start-1 lg:row-end-2 bg-flamingo-lighter",
   },
   {
-    Icon: Globe,
+    Icon: FileText,
     name: "Accompagnement adapté à vos besoins",
     description: "Supports 100+ languages and counting.",
     href: "/",
