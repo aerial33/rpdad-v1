@@ -41,12 +41,14 @@ export const Footer = () => {
           <div>
             <RpdadLogo height={90} className="m-auto lg:m-0" />
             <p className="gradient-secondary text-lg font-semibold">
-              Réseau Public Départemental <br /> d&apos;Aide à Domicile de la
-              Gironde
+              {
+                "Réseau Public Départemental <br /> d&apos;Aide à Domicile de la Gironde"
+              }
             </p>
             <p className="text-muted-foreground mt-6 text-sm">
-              Aide à la vie quotidienne pour les personnes âgées ou en situation
-              de handicap.
+              {
+                "Aide à la vie quotidienne pour les personnes âgées ou en situation de handicap."
+              }
             </p>
           </div>
           <ul className="text-muted-foreground flex items-center space-x-6">
@@ -78,6 +80,16 @@ export const Footer = () => {
               </ul>
             </div>
           ))}
+        </div>
+        <div className="flex flex-col items-center justify-center text-center">
+          <h3 className="mb-6 font-bold">Adresse</h3>
+          <p className="text-muted-foreground mb-6">
+            Le Colisée <br />
+            17 rue Thomas Edison <br />
+            33600 PESSAC
+          </p>
+          <p className="text-muted-foreground">{"05.40.12.90.11"}</p>
+          <p className="text-muted-foreground">{"rpdad@udccas33.org"}</p>
         </div>
       </div>
       <div className="text-muted-foreground mt-20 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium lg:flex-row lg:items-center lg:text-left">

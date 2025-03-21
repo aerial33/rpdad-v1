@@ -4,12 +4,12 @@ export const navItems = [
     path: "/",
   },
   {
-    label: "Blog",
-    path: "/posts",
+    label: "Actualités",
+    path: "/actualites",
   },
   {
-    label: "Framer Motion",
-    path: "/framer-motion",
+    label: "Services",
+    path: "/services",
   },
   {
     label: "Contact",
@@ -28,17 +28,17 @@ export const megaNavItems = [
     label: "Services",
     subMenus: [
       {
-        title: "Produits Vedettes",
+        title: "Informations pratiques",
         items: [
           {
-            label: "Tailwind Master Kit",
-            description: "Composants prêts pour la production",
+            label: "Accès au RPDAD",
+            description: "Accès au RPDAD",
             href: "/produits/tailwind",
             src: "https://assets.aceternity.com/demos/tailwindmasterkit.webp",
           },
           {
-            label: "Moonbeam",
-            description: "Création de contenu par IA",
+            label: "Offres d'emploi",
+            description: "Offres d'emploi",
             href: "/produits/moonbeam",
             src: "https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png",
           },
@@ -48,19 +48,19 @@ export const megaNavItems = [
         title: "Services",
         items: [
           {
-            label: "Développement Web",
-            description: "Solutions web personnalisées",
-            href: "/services/dev-web",
+            label: "Aide à la personne",
+            description: "Aide aux personnes âgées en perte d’autonomie.",
+            href: "/services/aide-a-la-personne",
           },
           {
-            label: "Design d'Interface",
-            description: "Design UI/UX élégant",
-            href: "/services/design",
+            label: "Aide handicap",
+            description: "Aide pour les personnes en situation de handicap",
+            href: "/services/aide-handicap",
           },
           {
-            label: "Optimisation SEO",
+            label: "Autres services",
             description: "Améliorez votre visibilité",
-            href: "/services/seo",
+            href: "/services/autres-services",
           },
         ],
       },
@@ -71,32 +71,32 @@ export const megaNavItems = [
     label: "Le RPDAD",
     subMenus: [
       {
-        title: "Pour les Équipes",
+        title: "Nos Équipes",
         items: [
           {
-            label: "Entreprise",
-            description: "Pour les grandes organisations",
-            href: "/solutions/entreprise",
+            label: "Présentation",
+            description: "Présentation du RPDAD",
+            href: "/le-rpdad/presentation",
           },
           {
-            label: "Startups",
-            description: "Pour les entreprises en croissance",
-            href: "/solutions/startups",
+            label: "Nos Partenaires",
+            description: "Nos partenaires",
+            href: "/le-rpdad/nos-partenaires",
           },
         ],
       },
       {
-        title: "Par Industrie",
+        title: "Par Secteur",
         items: [
           {
-            label: "E-commerce",
-            description: "Solutions pour la vente en ligne",
-            href: "/industries/ecommerce",
+            label: "Les Interventions",
+            description: "Les interventions du RPDAD",
+            href: "/le-rpdad/les-interventions",
           },
           {
-            label: "Santé",
-            description: "Services médicaux et de santé",
-            href: "/industries/sante",
+            label: "L'Administration des Services",
+            description: "L'administration des services du RPDAD",
+            href: "/le-rpdad/l-administration-des-services",
           },
         ],
       },
@@ -105,11 +105,11 @@ export const megaNavItems = [
   {
     id: 4,
     label: "Actualités",
-    link: "/posts",
+    link: "/actualites",
   },
   {
     id: 5,
     label: "Services membres",
-    link: "/framer-motion",
+    link: "/services-membres",
   },
 ]
