@@ -5,7 +5,7 @@ interface ContentBlogProps {
   // autres props existantes...
 }
 
-export const BlogSection = ({ service, ...props }: ContentBlogProps) => {
+export const BlogSection = ({ service }: ContentBlogProps) => {
   return (
     <section>
       <div className="container mx-auto flex max-w-7xl flex-col items-center pt-4 pb-8 md:flex-row md:pt-8 md:pb-10 lg:pb-16">
