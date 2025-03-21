@@ -66,7 +66,7 @@ const BentoCard = ({
           {tag}
         </Badge>
       )}
-      <h3 className="text-3xl font-bold text-balance text-gray-600 lg:text-4xl dark:text-neutral-300">
+      <h3 className="text-3xl font-bold text-balance text-gray-800 lg:text-4xl dark:text-neutral-300">
         {name}
       </h3>
       <p className="text-balance text-neutral-700">{description}</p>
