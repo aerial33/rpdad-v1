@@ -35,7 +35,7 @@ interface GeoMapProps {
   idField?: string
   nameField?: string
   highlightedAreaId?: string | null
-  onAreaClick?: (id: string, name: string) => void
+  onAreaClick?: (id: string, name: string, extraData?: any) => void
   defaultFill?: string
   highlightFill?: string
   hoverFill?: string
@@ -146,7 +146,7 @@ const GeoMap = ({
         if (onAreaClick) {
           const id = d.properties[idField] || d.id
           const name = d.properties[nameField]
-          onAreaClick(id, name)
+          onAreaClick(id, name, d.properties)
         }
       })
   }, [

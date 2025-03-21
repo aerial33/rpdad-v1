@@ -1,20 +1,20 @@
-"use client";
+"use client"
 
-import React from "react";
+import React from "react"
 
 // Import des données GeoJSON des cantons de la Gironde
-import girondeCantonsData from "@/data/geo/gironde-cantons.json";
+import girondeCantonsData from "@/data/geo/gironde-cantons.json"
 
 // Import du composant GeoMap et de son type GeoData
-import GeoMap, { GeoData } from "./france-map";
+import GeoMap, { GeoData } from "./france-map"
 
 // Interface définissant les props du composant MapGironde
 interface MapGirondeProps {
-  width?: number; // Largeur optionnelle de la carte
-  height?: number; // Hauteur optionnelle de la carte
-  className?: string; // Classes CSS additionnelles
-  highlightedAreaId?: string | null; // ID du canton à mettre en surbrillance
-  onAreaClick?: (areaId: string, areaName: string) => void; // Callback lors du clic sur un canton
+  width?: number // Largeur optionnelle de la carte
+  height?: number // Hauteur optionnelle de la carte
+  className?: string // Classes CSS additionnelles
+  highlightedAreaId?: string | null // ID du canton à mettre en surbrillance
+  onAreaClick?: (areaId: string, areaName: string, extraData?: any) => void // Callback lors du clic sur un canton
 }
 
 // Définition du composant MapGironde avec ses valeurs par défaut
@@ -42,5 +42,5 @@ export const MapGironde: React.FC<MapGirondeProps> = ({
       hoverFill="#475569" // Gris foncé pour le survol
       hoverHighlightFill="#2563eb" // Bleu foncé pour le survol en surbrillance
     />
-  );
-};
+  )
+}

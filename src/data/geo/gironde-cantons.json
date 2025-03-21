@@ -55,7 +55,11 @@
           ]
         ]
       },
-      "properties": { "code": "33001", "nom": "Andernos-les-Bains" }
+      "properties": {
+        "code": "33001",
+        "nom": "Andernos-les-Bains",
+        "villes": ["Andernos-les-Bains", "Arès", "Audenge", "Lanton"]
+      }
     },
     {
       "type": "Feature",
@@ -369,7 +373,17 @@
           ]
         ]
       },
-      "properties": { "code": "33011", "nom": "Cr\u00e9on" }
+      "properties": {
+        "code": "33011",
+        "nom": "Cr\u00e9on",
+        "villes": [
+          "Créon",
+          "CIAS des Portes de l'entre-deux-mers",
+          "CCAS Canejan",
+          "CCAS Cestas",
+          "CCAS Cadaujac"
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -496,7 +510,7 @@
           ]
         ]
       },
-      "properties": { "code": "33013", "nom": "Estuaire" }
+      "properties": { "code": "33013", "nom": "Estuaire", "villes": ["Blaye"] }
     },
     {
       "type": "Feature",
@@ -543,7 +557,11 @@
           ]
         ]
       },
-      "properties": { "code": "33014", "nom": "Gujan-Mestras" }
+      "properties": {
+        "code": "33014",
+        "nom": "Gujan-Mestras",
+        "villes": ["Belin-Béliet", "Le Barp", "Le Teich", "Salles"]
+      }
     },
     {
       "type": "Feature",
@@ -698,7 +716,11 @@
           ]
         ]
       },
-      "properties": { "code": "33016", "nom": "Libournais-Fronsadais" }
+      "properties": {
+        "code": "33016",
+        "nom": "Libournais-Fronsadais",
+        "villes": ["CIAS du Fronsadais", "CCAS Vayres"]
+      }
     },
     {
       "type": "Feature",
@@ -920,7 +942,11 @@
           ]
         ]
       },
-      "properties": { "code": "33021", "nom": "Nord-Libournais" }
+      "properties": {
+        "code": "33021",
+        "nom": "Nord-Libournais",
+        "villes": ["CCAS Guitres", "CCAS saint Seurin sur l'Isle"]
+      }
     },
     {
       "type": "Feature",
@@ -1075,7 +1101,16 @@
           ]
         ]
       },
-      "properties": { "code": "33025", "nom": "Portes du M\u00e9doc" }
+      "properties": {
+        "code": "33025",
+        "nom": "Blanquefort",
+        "villes": [
+          "CCAS Blanquefort",
+          "CCAS Bruges",
+          "CCAS Eysines",
+          "CCAS Le Bouscat"
+        ]
+      }
     },
     {
       "type": "Feature",
@@ -1286,7 +1321,11 @@
           ]
         ]
       },
-      "properties": { "code": "33028", "nom": "Saint-M\u00e9dard-en-Jalles" }
+      "properties": {
+        "code": "33028",
+        "nom": "Saint-M\u00e9dard-en-Jalles",
+        "villes": ["CCAS Martignas sur Jalles", "CCAS Saint-Médard-en-Jalles"]
+      }
     },
     {
       "type": "Feature",
@@ -1390,7 +1429,17 @@
           ]
         ]
       },
-      "properties": { "code": "33029", "nom": "Sud-Gironde" }
+      "properties": {
+        "code": "33029",
+        "nom": "Sud-Gironde",
+        "ville": [
+          "Landiras",
+          "Saint Macaire",
+          "Saint Pierre d'Aurillac",
+          "Cias du Bazadais",
+          "Cias du Sud-Gironde"
+        ]
+      }
     },
     {
       "type": "Feature",
