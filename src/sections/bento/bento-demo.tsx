@@ -13,7 +13,7 @@ const features = [
     cta: "Découvrer nos engagements",
     background: <img className="absolute -top-20 -right-20 opacity-60" />,
     className:
-      "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-3 bg-primary lg:rounded-tl-[300px] text-white",
+      "lg:row-start-1 lg:row-end-3 lg:col-start-1 lg:col-end-3 bg-primary-light lg:rounded-tl-[300px] text-white",
   },
   {
     Icon: Mail,

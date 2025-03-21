@@ -12,11 +12,16 @@ function Feature() {
         <div className="flex flex-col gap-10 lg:flex-row">
           <div className="flex flex-col items-start gap-4">
             <div>
-              <Badge>{"Actualités"}</Badge>
+              <Badge
+                variant={"outline"}
+                className="bg-flamingo-light text-md mb-4 text-white"
+              >
+                {"Actualités"}
+              </Badge>
             </div>
             <div className="flex flex-col gap-2">
               <h2>
-                <span className="text-stroke-2 max-w-xl text-left text-7xl text-white uppercase">
+                <span className="text-stroke-2 max-w-xl text-left text-5xl text-white uppercase lg:text-7xl">
                   {"Actualités"}
                 </span>
                 <br />

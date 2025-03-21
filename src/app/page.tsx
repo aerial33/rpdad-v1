@@ -11,9 +11,9 @@ export default function Home() {
       <HeroSelector variant="img-grid" />
       <MapGirondeSection />
       <StatisticSection />
+      <FeatureDemo />
       <AgendaEvents />
       <BentoDemo />
-      <FeatureDemo />
     </main>
   )
 }
