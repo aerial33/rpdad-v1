@@ -1,5 +1,6 @@
 import { HeroSelector } from "@/sections/Hero"
 import AgendaEvents from "@/sections/agenda/event-section"
+import { BentoDemo } from "@/sections/bento/bento-demo"
 import MapGirondeSection from "@/sections/map/map-gironde"
 import StatisticSection from "@/sections/stat/statistic"
 
@@ -10,6 +11,7 @@ export default function Home() {
       <MapGirondeSection />
       <StatisticSection />
       <AgendaEvents />
+      <BentoDemo />
     </main>
   )
 }
