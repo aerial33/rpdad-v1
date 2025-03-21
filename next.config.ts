@@ -15,6 +15,10 @@ const nextConfig: NextConfig = {
         hostname: "images.pexels.com",
         protocol: "https",
       },
+      {
+        hostname: "www.rpdad.fr",
+        protocol: "https",
+      },
     ],
   },
 }

@@ -28,12 +28,9 @@ export default function AgendaEvents() {
             </p>
           </div>
 
-          <Button
-            variant="outline"
-            className="group my-12 w-fit text-lg lg:mb-0"
-          >
+          <Button className="group my-12 w-fit text-lg lg:mb-0">
             {"Voir tous les événements"}
-            <ArrowRight className="text=lg transition-transform group-hover:translate-x-1" />
+            <ArrowRight className="ml-2 text-lg transition-transform group-hover:translate-x-1" />
           </Button>
         </div>
 

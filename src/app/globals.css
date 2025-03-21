@@ -224,6 +224,9 @@
     @apply text-3xl font-bold text-balance md:text-4xl;
   }
 
+  .text-stroke-2 {
+    -webkit-text-stroke: 1px var(--primary);
+  }
   .gradient-primary {
     @apply from-primary-light to-primary-dark bg-gradient-to-bl bg-clip-text text-transparent;
   }
