@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react"
 interface GeoFeature {
   type: "Feature"
   id?: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   properties: { [key: string]: any }
   geometry: {
     type: "Polygon"
@@ -141,6 +142,7 @@ const GeoMap = ({
           setTooltipData(null)
         }
       )
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       .on("click", function (event: MouseEvent, d: GeoFeature) {
         if (onAreaClick) {
           const id = d.properties[idField] || d.id

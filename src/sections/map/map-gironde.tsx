@@ -7,8 +7,6 @@ import { useState } from "react"
 import { MapGironde } from "@/components/geomap/gironde"
 import { FadeUp } from "@/components/motion/animations"
 
-const transition = { duration: 4, yoyo: Infinity, ease: "easeInOut" }
-
 export default function MapGirondeSection() {
   const [selectedArea, setSelectedArea] = useState<{
     id: string
