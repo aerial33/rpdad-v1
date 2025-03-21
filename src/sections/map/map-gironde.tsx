@@ -4,6 +4,8 @@ import { motion } from "framer-motion"
 
 import { useState } from "react"
 
+import Link from "next/link"
+
 import { MapGironde } from "@/components/geomap/gironde"
 import { FadeUp } from "@/components/motion/animations"
 import { Badge } from "@/components/ui/badge"
@@ -81,7 +83,10 @@ export default function MapGirondeSection() {
                   </p>
                   <ul className="mt-1 list-disc pl-5 text-gray-700">
                     {selectedArea.villes.map((ville, index) => (
-                      <li key={index}>{ville}</li>
+                      <li key={index}>
+                        {" "}
+                        <Link href={`/services-membres/${ville}`}>{ville}</Link>
+                      </li>
                     ))}
                   </ul>
                 </div>

@@ -2,6 +2,7 @@
 
 /* Activation du plugin d'animation pour Tailwind CSS */
 @plugin "tailwindcss-animate";
+@plugin "@tailwindcss/typography";
 
 /* Définition d'un variant personnalisé pour le mode sombre */
 @custom-variant dark (&:is(.dark *));
