@@ -3,26 +3,26 @@ import { Badge } from "@/components/ui/badge"
 const Membres = () => {
   return (
     <div>
-      <Feature />
+      <FeatureMembres />
     </div>
   )
 }
 
 export default Membres
 
-function Feature() {
+function FeatureMembres() {
   return (
     <div className="w-full py-20">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col items-start gap-4">
             <div>
-              <Badge>{`Services membres`}</Badge>
+              <Badge>{"Services membres"}</Badge>
             </div>
             <div className="flex flex-col gap-2">
               <h2 className="text-left text-3xl text-balance md:text-5xl">
                 {
-                  "Les membres du Réseau Public Départemental d'Aide àDomicile de la Gironde"
+                  "Les membres du Réseau Public Départemental d'Aide à Domicile de la Gironde"
                 }
               </h2>
               <div className="container mx-auto mt-4 flex w-full flex-wrap gap-4">
@@ -104,5 +104,3 @@ function Feature() {
     </div>
   )
 }
-
-export { Feature }
