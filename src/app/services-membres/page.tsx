@@ -12,7 +12,7 @@ export default Membres
 
 function FeatureMembres() {
   return (
-    <div className="w-full py-20">
+    <div className="bg-flamingo-lightest w-full py-20">
       <div className="container mx-auto">
         <div className="flex flex-col gap-10">
           <div className="flex flex-col items-start gap-4">

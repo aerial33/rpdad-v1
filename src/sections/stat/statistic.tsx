@@ -24,7 +24,7 @@ function Stat({ value, label, showDot = false }: StatProps) {
 
 export default function StatisticSection() {
   return (
-    <section className="grid grid-cols-1 gap-6 py-12 md:gap-16 lg:grid-cols-2">
+    <section className="bg-primary-lightest grid grid-cols-1 gap-6 py-12 md:gap-16 lg:grid-cols-2">
       <div className="relative overflow-hidden rounded-2xl">
         <iframe
           className="aspect-video h-full w-full"

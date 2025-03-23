@@ -49,8 +49,8 @@ const features = [
 
 function BentoDemo() {
   return (
-    <section className="center-element px-4 py-12 xl:px-0">
-      <BentoGrid className="lg:grid-cols-4 lg:grid-rows-2">
+    <section className="bg-flamingo-lightest px-4 py-12 xl:px-0">
+      <BentoGrid className="center-element lg:grid-cols-4 lg:grid-rows-2">
         {features.map((feature) => (
           <BentoCard key={feature.name} {...feature} />
         ))}

@@ -35,8 +35,8 @@ import { navItems } from "@/data/nav-items"
 
 export const Footer = () => {
   return (
-    <footer className="center-element py-12 md:pt-16">
-      <div className="flex flex-col items-center justify-between gap-10 border-t border-gray-200 text-center lg:flex-row lg:text-left">
+    <footer className="bg-primary-lightest py-12 md:pt-16">
+      <div className="center-element flex flex-col items-center justify-between gap-10 border-t border-gray-200 text-center lg:flex-row lg:text-left">
         <div className="flex w-full max-w-96 shrink flex-col items-center justify-between gap-6 lg:items-start">
           <div>
             <RpdadLogo height={90} className="m-auto lg:m-0" />
@@ -90,7 +90,7 @@ export const Footer = () => {
           <p className="text-muted-foreground">{"rpdad@udccas33.org"}</p>
         </div>
       </div>
-      <div className="text-muted-foreground mt-20 flex flex-col justify-between gap-4 border-t pt-8 text-center text-sm font-medium lg:flex-row lg:items-center lg:text-left">
+      <div className="text-muted-foreground mt-20 flex flex-col justify-between gap-4 border-t px-4 pt-8 text-center text-sm font-medium lg:flex-row lg:items-center lg:text-left">
         <p>© 2025 RPDAD. Tous droits réservés.</p>
         <ul className="flex justify-center gap-4 lg:justify-start">
           <li className="hover:text-primary">

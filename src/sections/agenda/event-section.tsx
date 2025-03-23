@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button"
 
 export default function AgendaEvents() {
   return (
-    <section className="py-24">
+    <section className="bg-flamingo-lightest py-24">
       <div className="grid grid-cols-1 grid-rows-1 gap-4 lg:grid-cols-8 lg:grid-rows-3">
         {/* Left section with magenta background */}
         <div className="col-span-1 row-span-2 flex flex-col justify-between lg:col-span-3 lg:col-start-1 lg:row-span-3 lg:row-start-1">
