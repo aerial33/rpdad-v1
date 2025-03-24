@@ -43,7 +43,7 @@ export default function MapGirondeSection() {
   }
 
   return (
-    <section className="bg-chateau-lightest py-12">
+    <section className="py-12">
       <div className="center-element mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
         <FadeUp className="p-4">
           <Badge

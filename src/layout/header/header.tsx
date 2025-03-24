@@ -23,7 +23,7 @@ export const Header = ({
     <header
       className={cn(
         className,
-        "theme-dark:border-gray-600 border-b border-gray-50 shadow-xs"
+        "from-flamingo-lightest bg-gradient-to-t to-white"
       )}
     >
       <div className="center-element flex items-center justify-between py-6">

@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button"
 const Hero = () => {
   return (
     <>
-      <section className="bg-flamingo-lightest py-12 md:pt-24">
+      <section className="from-flamingo-lighter to-flamingo-lightest rounded-b-4xl bg-gradient-to-t py-12 shadow md:pt-24">
         <div className="center-element grid grid-cols-1 gap-4 px-4 md:px-0 lg:grid-cols-4 lg:gap-8">
           <div className="mb-8 self-end lg:col-span-2 lg:col-end-3 lg:mb-0">
             <FadeUp className="mb-8 flex flex-col">
@@ -48,15 +48,6 @@ const Hero = () => {
           </div>
           <div className="lg:col-span-2 lg:col-end-5">
             <div className="relative">
-              {/* <div
-                className="absolute top-0 right-0 -z-[1] !h-[9rem] !w-[9rem] !bg-[radial-gradient(#FF4C0B_2px,transparent_2.5px)] opacity-50"
-                style={{
-                  backgroundSize: "0.75rem 0.75rem",
-                  bottom: "-1rem",
-                  left: "-1.5rem",
-                  transform: "translate3d(0px, -2px, 0px)",
-                }}
-              ></div> */}
               <Image
                 src="/img/hero-image.png"
                 width={616}
@@ -64,7 +55,7 @@ const Hero = () => {
                 alt="Hero Illustration"
                 layout="intrinsic"
                 loading="eager"
-                className="z-10"
+                className="z-20"
               />
               <svg
                 xmlns="http://www.w3.org/2000/svg"

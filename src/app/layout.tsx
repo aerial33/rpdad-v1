@@ -33,9 +33,9 @@ export default function RootLayout({
         <link rel="icon" href="/icon.svg" />
       </head>
       <body
-        className={`${lexendDeca.variable} ${nunito.variable} flex min-h-screen flex-col antialiased`}
+        className={`${lexendDeca.variable} ${nunito.variable} bg-flamingo-lightest flex min-h-screen flex-col antialiased`}
       >
-        <Header navbarVariant="mega" />
+        <Header navbarVariant="medium" />
         {children}
         <Footer />
       </body>
