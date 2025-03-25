@@ -24,7 +24,7 @@ export const NavbarDefault = ({ className }: { className?: string }) => {
             "hover:text-primary group relative py-2 transition lg:px-4",
             {
               "text-primary font-bold": pathname === path,
-              "theme-dark:text-gray-400 text-gray-500": pathname !== path,
+              "theme-dark:text-gray-400 text-gray-700": pathname !== path,
             }
           )}
         >

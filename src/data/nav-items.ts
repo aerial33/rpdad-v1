@@ -10,6 +10,28 @@ export const navItems = [
   {
     label: "Services",
     path: "/services",
+    subMenus: [
+      {
+        title: "Services",
+        items: [
+          {
+            label: "Aide à la personne",
+            description: "Aide aux personnes âgées en perte d’autonomie.",
+            href: "/services/aide-a-la-personne",
+          },
+          {
+            label: "Aide handicap",
+            description: "Aide pour les personnes en situation de handicap",
+            href: "/services/aide-handicap",
+          },
+          {
+            label: "Autres services",
+            description: "Améliorez votre visibilité",
+            href: "/services/autres-services",
+          },
+        ],
+      },
+    ],
   },
   {
     label: "Contact",
