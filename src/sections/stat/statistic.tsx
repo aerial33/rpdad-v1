@@ -1,3 +1,5 @@
+import { Image } from "lucide-react"
+
 import { Badge } from "@/components/ui/badge"
 
 interface StatProps {
@@ -25,14 +27,14 @@ function Stat({ value, label, showDot = false }: StatProps) {
 export default function StatisticSection() {
   return (
     <section className="bg-primary-lightest grid grid-cols-1 gap-6 rounded-t-4xl py-12 md:gap-16 lg:grid-cols-2">
-      <div className="relative overflow-hidden rounded-2xl">
-        <iframe
-          className="aspect-video h-full w-full"
-          src="https://www.youtube.com/embed/UULIAQfT2O0"
-          title="Vidéo RPDAD"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-        ></iframe>
+      <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-gray-300 xl:max-w-[80%]">
+        <Image width={100} height={100} color="gray" />
+        {/* <Image
+          src="/images/statistic.jpg"
+          alt="Statistic"
+          width={1000}
+          height={1000}
+        /> */}
       </div>
 
       <div className="mx-auto max-w-6xl">

@@ -239,6 +239,6 @@
 
 @layer utilities {
   .center-element {
-    @apply container mx-auto px-4 xl:px-0;
+    @apply container mx-auto px-4;
   }
 }

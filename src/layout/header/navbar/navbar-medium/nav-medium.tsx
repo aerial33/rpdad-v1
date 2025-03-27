@@ -11,7 +11,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 
-import { navItems } from "@/data/nav-items"
+import { navRpdad } from "@/data/nav-items"
 
 export const NavbarMedium = () => {
   const pathname = usePathname()
@@ -20,18 +20,18 @@ export const NavbarMedium = () => {
   return (
     <nav className="p-2">
       {/* Desktop Navigation */}
-      <div className="hidden space-x-6 md:flex">
-        {navItems.map(({ label, path, subMenus }) =>
+      <div className="hidden gap-6 lg:flex">
+        {navRpdad.map(({ label, path, subMenus }) =>
           subMenus ? (
             <div
+              key={label}
               onMouseEnter={() => setIsOpen(true)}
               onMouseLeave={() => setIsOpen(false)}
               className="relative"
             >
               <Link
-                key={label}
                 href={path}
-                className={`hover:text-primary relative flex items-center gap-1 py-2 transition lg:px-4 ${
+                className={`hover:text-primary relative flex items-center gap-1 py-2 transition ${
                   pathname === path
                     ? "text-primary font-bold"
                     : "text-gray-700 dark:text-gray-400"
@@ -64,10 +64,10 @@ export const NavbarMedium = () => {
                       restDelta: 0.001,
                       restSpeed: 0.001,
                     }}
-                    className="bg-flamingo-lightest/50 absolute top-full left-0 z-50 min-w-[200px] rounded-xl p-4 shadow-lg dark:bg-gray-800"
+                    className="bg-flamingo-lightest absolute top-full left-0 z-50 min-w-[200px] rounded-xl p-4 shadow-lg dark:bg-gray-800"
                   >
                     {subMenus.map(({ title, items }) => (
-                      <div className="mt-2 space-y-2">
+                      <div key={title} className="mt-2 space-y-2">
                         {items.map(({ label, href }) => (
                           <Link
                             key={label}
@@ -87,7 +87,7 @@ export const NavbarMedium = () => {
             <Link
               key={label}
               href={path}
-              className={`hover:text-primary relative py-2 transition lg:px-4 ${
+              className={`hover:text-primary relative py-2 transition ${
                 pathname === path
                   ? "text-primary font-bold"
                   : "text-gray-700 dark:text-gray-400"

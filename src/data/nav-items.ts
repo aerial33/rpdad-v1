@@ -135,3 +135,47 @@ export const megaNavItems = [
     link: "/services-membres",
   },
 ]
+
+export const navRpdad = [
+  {
+    label: "Accueil",
+    path: "/",
+  },
+  {
+    label: "Nos services membres",
+    path: "/services-membres",
+  },
+  {
+    label: "Actualités",
+    path: "/actualites",
+  },
+  {
+    label: "Offres d'emploi",
+    path: "/offres-emploi",
+    subMenus: [
+      {
+        title: "Emplois",
+        items: [
+          {
+            label: "Postuler à un emploi",
+            description: "Postuler à un emploi",
+            href: "/offres-emploi/postuler-a-un-emploi",
+          },
+          {
+            label: "Rechercher un emploi",
+            description: "Rechercher un emploi",
+            href: "/offres-emploi/rechercher-un-emploi",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    label: "Services",
+    path: "/services",
+  },
+  {
+    label: "Contact",
+    path: "/contact",
+  },
+]
