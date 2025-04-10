@@ -20,13 +20,7 @@ function Feature() {
               </Badge>
             </div>
             <div className="flex flex-col gap-2">
-              <h2>
-                <span className="text-stroke-2 max-w-xl text-left text-5xl text-white uppercase lg:text-7xl">
-                  {"Actualités"}
-                </span>
-                <br />
-                {"Les actualités à ne pas manquer..."}
-              </h2>
+              <h2>{"Les actualités à ne pas manquer..."}</h2>
               <p className="max-w-xl text-left text-lg leading-relaxed tracking-tight text-neutral-500 lg:max-w-lg">
                 {
                   "Retrouvez toute l’acutalités du réseau des services membres  et du domaine de l’aide à domicile en général"

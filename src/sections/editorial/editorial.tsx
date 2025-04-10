@@ -1,15 +1,11 @@
-import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 
 export default function EditorialSection() {
   return (
-    <section className="bg-picton-blue-lighter py-32">
+    <section className="py-32">
       <div className="center-element">
         <div className="flex flex-col items-center justify-center lg:flex-row">
-          <div className="flex flex-col">
-            <Badge variant="secondary" className="mb-4 text-white">
-              Editorial
-            </Badge>
+          <div className="flex flex-col gap-4">
             <h2 className="lg:text-left">
               {
                 "Découvrez nos services d'aide à domicile adaptés à vos besoins."
@@ -23,6 +19,10 @@ export default function EditorialSection() {
           <p className="mb-8 max-w-xl text-center text-zinc-600 lg:text-left">
             {
               "Le Réseau Public Départemental d'Aide à Domicile de la Gironde accompagne près de 5000 personnes âgées et personnes en situation de handicap qui choisissent de vivre à domicile."
+            }{" "}
+            <br />
+            {
+              "Les agents de la fonction publique vous aident et vous accompagnent dans les actes de la vie quotidienne. Ils vous apportent un service dans un esprit de coopération avec vous et avec les autres acteurs qui interviennent auprès de vous…."
             }
           </p>
         </div>

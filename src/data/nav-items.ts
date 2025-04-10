@@ -142,7 +142,7 @@ export const navRpdad = [
     path: "/",
   },
   {
-    label: "Nos services membres",
+    label: "Nos membres",
     path: "/services-membres",
   },
   {
@@ -174,8 +174,8 @@ export const navRpdad = [
     label: "Services",
     path: "/services",
   },
-  {
-    label: "Contact",
-    path: "/contact",
-  },
+  // {
+  //   label: "Contact",
+  //   path: "/contact",
+  // },
 ]
