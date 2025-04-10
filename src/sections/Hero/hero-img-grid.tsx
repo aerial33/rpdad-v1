@@ -20,8 +20,7 @@ const Hero = () => {
                 Un service proche de chez vous
               </div>
               <h1 className="text-4xl leading-snug font-bold text-gray-800 lg:text-5xl lg:leading-tight">
-                Premier <span className="gradient-primary">Réseau </span>Public
-                Départemental{" "}
+                Le Réseau Public Départemental{" "}
                 <span className="gradient-primary">d&apos;aide à domicile</span>{" "}
                 de la Gironde
               </h1>
