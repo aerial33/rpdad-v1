@@ -1,14 +1,10 @@
 "use client"
 
-import { motion } from "framer-motion"
-
-import { useState } from "react"
-
-import Link from "next/link"
-
 import { Arrondissement } from "@/components/geomap/arrondissement"
 import { FadeUp } from "@/components/motion/animations"
 import { Badge } from "@/components/ui/badge"
+
+//! todo: fix the clickable map
 
 // Définir une interface pour les propriétés du canton
 export interface CantonProperties {
@@ -19,28 +15,28 @@ export interface CantonProperties {
 }
 
 export default function MapGirondeSection() {
-  const [selectedArea, setSelectedArea] = useState<{
-    id: string
-    name: string
-    villes?: string[]
-  } | null>(null)
+  // const [selectedArea, setSelectedArea] = useState<{
+  //   id: string
+  //   name: string
+  //   villes?: string[]
+  // } | null>(null)
 
-  const handleAreaClick = (
-    areaId: string,
-    areaName: string,
-    extraData?: CantonProperties
-  ) => {
-    console.log(extraData)
-    if (selectedArea?.id === areaId) {
-      setSelectedArea(null)
-    } else {
-      setSelectedArea({
-        id: areaId,
-        name: areaName,
-        villes: extraData?.villes || [],
-      })
-    }
-  }
+  // const handleAreaClick = (
+  //   areaId: string,
+  //   areaName: string,
+  //   extraData?: CantonProperties
+  // ) => {
+  //   console.log(extraData)
+  //   if (selectedArea?.id === areaId) {
+  //     setSelectedArea(null)
+  //   } else {
+  //     setSelectedArea({
+  //       id: areaId,
+  //       name: areaName,
+  //       villes: extraData?.villes || [],
+  //     })
+  //   }
+  // }
 
   return (
     <section className="py-12">
@@ -66,7 +62,7 @@ export default function MapGirondeSection() {
             <li>{"Centres Communaux d'Action Sociale (CCAS)"}</li>
             <li>{"Centres Intercommunaux d'Action Sociale (CIAS)"}</li>
           </ul>
-          {selectedArea && (
+          {/* {selectedArea && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -92,7 +88,7 @@ export default function MapGirondeSection() {
                 </div>
               )}
             </motion.div>
-          )}
+          )} */}
         </FadeUp>
         <div className="p-4">
           {/* <MapGironde

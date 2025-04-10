@@ -14,7 +14,7 @@ interface GeoData {
 interface GeoFeature {
   type: "Feature"
   id?: string
-  properties: { [key: string]: any }
+  properties: { [key: string]: string }
   geometry: {
     type: "Polygon"
     coordinates: number[][][]
@@ -164,7 +164,7 @@ export const Arrondissement = ({
       .data(geoData.features)
       .enter()
       .append("path")
-      .attr("d", path as any)
+      .attr("d", path)
       .attr("fill", (d) => {
         const id = d.properties[propertyNameField] || ""
         return colorScale(id) as string
@@ -175,7 +175,7 @@ export const Arrondissement = ({
         if (!enableTooltip) return
 
         d3.select(this)
-          .attr("fill", function (d) {
+          .attr("fill", (d) => {
             const feature = d as GeoFeature
             const id = feature.properties[propertyNameField] || ""
             return (
@@ -194,11 +194,11 @@ export const Arrondissement = ({
           content: d.properties[propertyNameField] || "Arrondissement",
         })
       })
-      .on("mouseout", function (event, d) {
+      .on("mouseout", function () {
         if (!enableTooltip) return
 
         d3.select(this)
-          .attr("fill", function (d) {
+          .attr("fill", (d) => {
             const feature = d as GeoFeature
             const id = feature.properties[propertyNameField] || ""
             return colorScale(id) as string
@@ -207,7 +207,7 @@ export const Arrondissement = ({
 
         setTooltipData(null)
       })
-      .on("click", function (event: MouseEvent, d: GeoFeature) {
+      .on("click", (event: MouseEvent, d: GeoFeature) => {
         if (onAreaClick) {
           const name = d.properties[propertyNameField] || d.properties.nom
           console.log("click", name)
@@ -233,7 +233,7 @@ export const Arrondissement = ({
         .on("mouseover", function (event, d) {
           if (!enableTooltip) return
 
-          d3.select(this).attr("transform", function (d) {
+          d3.select(this).attr("transform", (d) => {
             const datum = d as Marker
             const coords = projection([
               datum.coordinates[1],
@@ -256,7 +256,7 @@ export const Arrondissement = ({
         .on("mouseout", function () {
           if (!enableTooltip) return
 
-          d3.select(this).attr("transform", function (d) {
+          d3.select(this).attr("transform", (d) => {
             const datum = d as Marker
             const coords = projection([
               datum.coordinates[1],
@@ -271,7 +271,7 @@ export const Arrondissement = ({
 
           setTooltipData(null)
         })
-        .on("click", function (event, d) {
+        .on("click", (event, d) => {
           if (onMarkerClick) {
             onMarkerClick(d as Marker)
           }
