@@ -6,17 +6,49 @@ import { Button } from "@/components/ui/button"
 import { HeroSelector, HeroVariant } from "@/sections/Hero"
 
 export function DynamicHeroSelector() {
-  const [variant, setVariant] = useState<HeroVariant>("img-grid")
-  const [showTitle, setShowTitle] = useState("")
-  const [showDescription, setShowDescription] = useState("")
+  // Récupérer les valeurs depuis localStorage au chargement initial
+  const [variant, setVariant] = useState<HeroVariant>(() => {
+    if (typeof window !== "undefined") {
+      const savedVariant = localStorage.getItem("heroVariant")
+      return (savedVariant as HeroVariant) || "img-grid"
+    }
+    return "img-grid"
+  })
+
+  const [showTitle, setShowTitle] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("heroTitle") || ""
+    }
+    return ""
+  })
+
+  const [showDescription, setShowDescription] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("heroDescription") || ""
+    }
+    return ""
+  })
+
   const [isOpen, setIsOpen] = useState(false)
   const panelRef = useRef<HTMLDivElement>(null)
   const buttonRef = useRef<HTMLButtonElement>(null)
 
+  // Sauvegarder les changements dans localStorage
+  useEffect(() => {
+    localStorage.setItem("heroVariant", variant)
+  }, [variant])
+
+  useEffect(() => {
+    localStorage.setItem("heroTitle", showTitle)
+  }, [showTitle])
+
+  useEffect(() => {
+    localStorage.setItem("heroDescription", showDescription)
+  }, [showDescription])
+
   // Fonction pour gérer les clics à l'extérieur du panneau
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      // Si le panneau est ouvert et que le clic n'est ni sur le panneau ni sur le bouton
       if (
         isOpen &&
         panelRef.current &&
@@ -28,16 +60,21 @@ export function DynamicHeroSelector() {
       }
     }
 
-    // Ajouter l'écouteur d'événements lorsque le panneau est ouvert
     if (isOpen) {
       document.addEventListener("mousedown", handleClickOutside)
     }
 
-    // Nettoyage de l'écouteur d'événements
     return () => {
       document.removeEventListener("mousedown", handleClickOutside)
     }
   }, [isOpen])
+
+  // Fonction pour sauvegarder les changements
+  const saveChanges = () => {
+    // Pas besoin d'action supplémentaire ici puisque les useEffect sauvegardent déjà
+    // Mais on peut ajouter un retour visuel
+    setIsOpen(false)
+  }
 
   // Toutes les variantes disponibles
   const variants: HeroVariant[] = [
@@ -65,7 +102,7 @@ export function DynamicHeroSelector() {
       <Button
         ref={buttonRef}
         onClick={() => setIsOpen(!isOpen)}
-        className="group absolute top-0 right-4 z-50 flex h-12 w-12 items-center gap-2 overflow-hidden rounded-full bg-slate-700 p-0 transition-all duration-300 hover:w-auto hover:rounded-full hover:px-4 hover:py-2"
+        className="group fixed top-20 right-4 z-50 flex h-12 w-12 items-center gap-2 overflow-hidden rounded-full bg-black/80 p-0 transition-all duration-300 hover:w-auto hover:rounded-full hover:px-4 hover:py-2"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +130,7 @@ export function DynamicHeroSelector() {
           {/* Panneau de contrôle (affiché sur le côté) */}
           <div
             ref={panelRef}
-            className="fixed top-0 right-0 z-40 h-full w-64 overflow-y-auto bg-slate-400/90 p-4 pt-20 text-white shadow-lg transition-all"
+            className="fixed top-0 right-0 z-40 h-full w-64 overflow-y-auto bg-black/90 p-4 pt-20 text-white shadow-lg transition-all"
           >
             <div className="flex flex-col gap-3">
               <div className="mb-2 font-bold">Sélecteur de Hero:</div>
@@ -129,6 +166,14 @@ export function DynamicHeroSelector() {
                   />
                 </div>
               )}
+
+              {/* Bouton pour enregistrer explicitement */}
+              <Button
+                onClick={saveChanges}
+                className="mt-4 w-full bg-green-600 hover:bg-green-700"
+              >
+                Enregistrer
+              </Button>
             </div>
           </div>
         </div>
