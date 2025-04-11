@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react"
 
+import { DotPattern } from "@/components/DotPattern"
 import { Button } from "@/components/ui/button"
 
 export function SectionContact() {
@@ -9,18 +10,14 @@ export function SectionContact() {
         <div className="mx-[-15px] !mt-[-50px] flex flex-wrap items-center lg:mx-[-20px] xl:mx-[-35px]">
           <div className="!relative !mt-[50px] w-full max-w-full flex-[0_0_auto] !px-[15px] lg:w-7/12 lg:!px-[20px] xl:w-7/12 xl:!px-[35px]">
             {/* Decorative dots */}
-            <div className="absolute -top-10 left-0 hidden flex-col gap-3 lg:flex">
-              {[...Array(11)].map((_, i) => (
-                <div key={`row-${i}`} className="flex gap-3">
-                  {[...Array(11)].map((_, j) => (
-                    <div
-                      key={`dot-${i}-${j}`}
-                      className="bg-picton-blue h-1 w-1 rounded-full"
-                    />
-                  ))}
-                </div>
-              ))}
-            </div>
+            <DotPattern
+              className="absolute -top-10 left-0 hidden lg:flex"
+              rows={11}
+              cols={11}
+              dotSize="md"
+              dotColor="bg-flamingo"
+              gap="md"
+            />
             <div className="mx-[-15px] !mt-[-25px] flex flex-wrap md:mx-[-12.5px] lg:mx-[-12.5px] xl:mx-[-12.5px]">
               <div className="!mt-[25px] w-full max-w-full flex-[0_0_auto] px-[12.5px] md:w-6/12 lg:w-6/12 xl:w-6/12">
                 <figure className="!relative !rounded-[.4rem] md:!mt-10 lg:!mt-10 xl:!mt-10">
