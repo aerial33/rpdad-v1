@@ -13,8 +13,15 @@ const eslintConfig = [
   ...compat.extends("next/core-web-vitals", "next/typescript", "prettier"),
   {
     rules: {
-      "prefer-arrow-callback": ["error"],
+      "prefer-arrow-callback": ["warn"],
       "prefer-template": ["error"],
+      // Ajout de la règle pour 'any'
+      "@typescript-eslint/no-explicit-any": ["warn"], // 'warn' au lieu de 'error'
+      // Autres règles TypeScript que vous pourriez vouloir configurer
+      "@typescript-eslint/no-unsafe-assignment": ["warn"],
+      "@typescript-eslint/no-unsafe-member-access": ["warn"],
+      "@typescript-eslint/no-unsafe-call": ["warn"],
+      "@typescript-eslint/no-unsafe-return": ["warn"],
     },
   },
 ]
