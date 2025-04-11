@@ -1,4 +1,4 @@
-import { DynamicHeroSelector } from "@/components/selectors/HeroSelectorDynamic"
+import { DynamicHeroSelector } from "@/components/selectors/HeroSelector"
 import { FeatureDemo } from "@/sections/actualites/actu-demo"
 import AgendaEvents from "@/sections/agenda/event-section"
 import { BentoDemo } from "@/sections/bento/bento-demo"

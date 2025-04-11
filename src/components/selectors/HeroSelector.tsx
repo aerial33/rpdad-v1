@@ -15,21 +15,21 @@ export function DynamicHeroSelector() {
           title: {
             type: "text",
             label: "Titre",
-            default: "Titre par défaut",
-            forVariants: ["mini"],
+            // default: "Titre par défaut",
+            forVariants: ["mini", "split"],
           },
           description: {
             type: "textarea",
             label: "Description",
-            default: "Description par défaut",
-            forVariants: ["mini"],
+            // default: "Description par défaut",
+            forVariants: ["mini", "split"],
           },
         },
         renderComponent: (variant, props) => {
-          if (variant === "mini") {
+          if (variant === "mini" || variant === "split") {
             return (
               <HeroSelector
-                variant="mini"
+                variant={variant === "mini" ? "mini" : "split"}
                 title={props.title}
                 description={props.description}
               />
