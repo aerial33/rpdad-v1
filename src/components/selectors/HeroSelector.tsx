@@ -10,7 +10,7 @@ export function DynamicHeroSelector() {
       config={{
         componentName: "Hero",
         variants: ["logo", "split", "split-image-form", "mini", "img-grid"],
-        defaultVariant: "img-grid",
+        defaultVariant: "split",
         customFields: {
           title: {
             type: "text",

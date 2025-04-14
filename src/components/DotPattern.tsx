@@ -74,7 +74,7 @@ export function DotPattern({ variant = "default", ...props }: DotPatternProps) {
       className={`flex flex-col ${GAP_SIZES[gap]} ${className}`}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      transition={{ duration: 1, delay: 0.5 }}
+      transition={{ duration: 1, delay: 1 }}
     >
       {[...Array(rows)].map((_, i) => (
         <motion.div

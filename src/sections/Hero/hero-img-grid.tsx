@@ -45,7 +45,7 @@ const Hero = () => {
               <LogoTicker />
             </FadeUp>
           </div>
-          <div className="z-10 lg:col-span-2 lg:col-end-5">
+          <div className="z-10 lg:col-span-2 lg:col-end-5 lg:justify-self-end">
             <div className="relative">
               <Image
                 src="/img/hero-image.png"
