@@ -136,7 +136,15 @@ export const megaNavItems = [
   },
 ]
 
-export const navRpdad = [
+interface NavItem {
+  label: string
+  path: string
+  subMenus?: {
+    title: string
+    items: { label: string; description: string; href: string }[]
+  }[]
+}
+export const navRpdad: NavItem[] = [
   {
     label: "Accueil",
     path: "/",
