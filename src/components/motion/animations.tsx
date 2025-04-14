@@ -57,7 +57,7 @@ export const FadeUp = ({
     <motion.div
       // ref={ref}
       variants={{
-        hidden: { opacity: 0, y: 10 },
+        hidden: { opacity: 0, y: 30 },
         visible: { opacity: 1, y: 0 },
       }}
       viewport={{ once: true }}
@@ -86,7 +86,7 @@ export const FadeRight = ({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, x: 20 },
+        hidden: { opacity: 0, x: 30 },
         visible: { opacity: 1, x: 0 },
       }}
       viewport={{ once: true }}
@@ -114,7 +114,7 @@ export const FadeLeft = ({
   return (
     <motion.div
       variants={{
-        hidden: { opacity: 0, x: -20 },
+        hidden: { opacity: 0, x: -30 },
         visible: { opacity: 1, x: 0 },
       }}
       viewport={{ once: true }}

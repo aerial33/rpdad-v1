@@ -40,29 +40,30 @@ export default function MapGirondeSection() {
 
   return (
     <section className="py-12">
-      <div className="center-element mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-        <FadeUp className="p-4">
-          <Badge
-            variant={"outline"}
-            className="bg-flamingo-light text-md mb-4 text-white"
-          >
-            {"les services membres"}
-          </Badge>
-          <h2 className="my-4 text-xl text-balance text-gray-800 md:text-3xl">
-            {
-              "Les CCAS et CIAS de vos communes ou intercommunalité vous proposent un service d'aide et d'accompagnement à domicile de qualité : "
-            }
-          </h2>
-          <p className="text-balance text-gray-500">
-            {
-              "Le Réseau Public Départemental d'Aide à Domicile de la Gironde compte à ce jour 32 services membres. Il s'agit exclusivement de services publics de proximité :"
-            }
-          </p>
-          <ul className="mt-4 list-disc pl-5 text-gray-500">
-            <li>{"Centres Communaux d'Action Sociale (CCAS)"}</li>
-            <li>{"Centres Intercommunaux d'Action Sociale (CIAS)"}</li>
-          </ul>
-          {/* {selectedArea && (
+      <FadeUp>
+        <div className="center-element mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+          <FadeUp className="p-4">
+            <Badge
+              variant={"outline"}
+              className="bg-flamingo-light text-md mb-4 text-white"
+            >
+              {"les services membres"}
+            </Badge>
+            <h2 className="my-4 text-xl text-balance text-gray-800 md:text-3xl">
+              {
+                "Les CCAS et CIAS de vos communes ou intercommunalité vous proposent un service d'aide et d'accompagnement à domicile de qualité : "
+              }
+            </h2>
+            <p className="text-balance text-gray-500">
+              {
+                "Le Réseau Public Départemental d'Aide à Domicile de la Gironde compte à ce jour 32 services membres. Il s'agit exclusivement de services publics de proximité :"
+              }
+            </p>
+            <ul className="mt-4 list-disc pl-5 text-gray-500">
+              <li>{"Centres Communaux d'Action Sociale (CCAS)"}</li>
+              <li>{"Centres Intercommunaux d'Action Sociale (CIAS)"}</li>
+            </ul>
+            {/* {selectedArea && (
             <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
@@ -89,18 +90,19 @@ export default function MapGirondeSection() {
               )}
             </motion.div>
           )} */}
-        </FadeUp>
-        <div className="p-4">
-          {/* <MapGironde
+          </FadeUp>
+          <div className="p-4">
+            {/* <MapGironde
             highlightedAreaId={selectedArea?.id || null}
             onAreaClick={handleAreaClick}
             width={800}
             height={800}
             className="shadow"
           /> */}
-          <Arrondissement />
+            <Arrondissement />
+          </div>
         </div>
-      </div>
+      </FadeUp>
     </section>
   )
 }

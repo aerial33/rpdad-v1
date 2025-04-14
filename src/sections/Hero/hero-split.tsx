@@ -20,7 +20,7 @@ export function HeroSplit({
     title || `Le Réseau Public Départemental d'aide à domicile de la Gironde`
   const dynamicDescription =
     description ||
-    "Branche médico-sociale de l'UDCCAS 33 (Union Départementale des Centres Communaux d'Action Sociale de la Gironde)  Aide à la vie quotidienne pour les personnes âgées ou en situation de handicap"
+    "Le Réseau Public Départemental d'Aide à Domicile de la Gironde (RPDAD) accompagne près de 5000 personnes âgées et personnes en situation de handicap qui choisissent de vivre à domicile."
   return (
     <section className="-z-10 py-12 text-white lg:text-slate-800">
       <div className="container mx-auto px-4">
@@ -31,7 +31,7 @@ export function HeroSplit({
                 <span className="text-muted-foreground">
                   {"À propos de nous"}
                 </span>
-                <a href="#" className="ml-2 flex items-center gap-1">
+                <a href="/le-rpdad" className="ml-2 flex items-center gap-1">
                   En savoir plus
                   <ArrowRight className="h-3 w-3" />
                 </a>
@@ -56,7 +56,7 @@ export function HeroSplit({
                     <ArrowRight className="h-4 w-4" />
                   </Button>
                 </Link>
-                <Link href="/offres">
+                <Link href="/offres-emploi">
                   <Button size="lg" variant="outline" className="gap-2">
                     Les Offres de notre Réseau
                     <ArrowRight className="h-4 w-4" />
