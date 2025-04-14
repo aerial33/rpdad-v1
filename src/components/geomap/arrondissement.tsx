@@ -63,6 +63,12 @@ interface ArrondissementProps {
   onAreaClick?: (name: string) => void
 }
 
+// Convertir l'icône Lucide en path SVG
+const getMarkerPath = () => {
+  // Path du MapPin de Lucide
+  return "M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"
+}
+
 export const Arrondissement = ({
   // Valeurs par défaut
   geoData = arronsdissementData as unknown as GeoData,
@@ -123,8 +129,8 @@ export const Arrondissement = ({
     "#f4a582",
     "#92c5de",
   ],
-  markerColor = "red",
-  markerHoverColor = "orange",
+  markerColor = "oklch(53.43% 0.1988 340.64)",
+  markerHoverColor = "oklch(53.43% 0.1988 340.64)",
   markerSize = 1.5,
   animateMarkers = false,
   animationDelay = 100,
@@ -181,7 +187,7 @@ export const Arrondissement = ({
             return (
               d3
                 .color(colorScale(id) as string)
-                ?.darker(0.3)
+                ?.darker(0.1)
                 .toString() || "#000"
             )
           })
@@ -230,21 +236,49 @@ export const Arrondissement = ({
             : "translate(0, 0)"
         })
         .style("opacity", animateMarkers ? 0 : 1)
+
+      // Remplacer l'ancien path par le nouveau marker Lucide
+      markerGroups
+        .append("path")
+        .attr("d", getMarkerPath())
+        .attr("fill", markerColor)
+        .attr("stroke", "#333")
+        .attr("stroke-width", 1)
+        .attr("transform", `scale(${markerSize / 2})`)
+        .on("mouseover", function () {
+          d3.select(this).attr("fill", markerHoverColor)
+        })
+        .on("mouseout", function () {
+          d3.select(this).attr("fill", markerColor)
+        })
+
+      // Animations et interactions
+      if (animateMarkers) {
+        markerGroups
+          .transition()
+          .delay((_, i) => i * animationDelay)
+          .duration(animationDuration)
+          .style("opacity", 1)
+      }
+
+      // Événements
+      markerGroups
         .on("mouseover", function (event, d) {
           if (!enableTooltip) return
 
-          d3.select(this).attr("transform", (d) => {
-            const datum = d as Marker
-            const coords = projection([
-              datum.coordinates[1],
-              datum.coordinates[0],
-            ])
-            return coords
-              ? `translate(${coords[0]}, ${coords[1]}) scale(1.2)`
-              : "translate(0, 0)"
-          })
-
-          d3.select(this).select("path").attr("fill", markerHoverColor)
+          d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("transform", function (d) {
+              const datum = d as Marker
+              const coords = projection([
+                datum.coordinates[1],
+                datum.coordinates[0],
+              ])
+              return coords
+                ? `translate(${coords[0] - markerSize / 2}, ${coords[1] - markerSize}) scale(1.2)`
+                : "translate(0, 0)"
+            })
 
           const [x, y] = d3.pointer(event, svg.node())
           setTooltipData({
@@ -256,18 +290,19 @@ export const Arrondissement = ({
         .on("mouseout", function () {
           if (!enableTooltip) return
 
-          d3.select(this).attr("transform", (d) => {
-            const datum = d as Marker
-            const coords = projection([
-              datum.coordinates[1],
-              datum.coordinates[0],
-            ])
-            return coords
-              ? `translate(${coords[0]}, ${coords[1]}) scale(2)`
-              : "translate(0, 0)"
-          })
-
-          d3.select(this).select("path").attr("fill", markerColor)
+          d3.select(this)
+            .transition()
+            .duration(200)
+            .attr("transform", function (d) {
+              const datum = d as Marker
+              const coords = projection([
+                datum.coordinates[1],
+                datum.coordinates[0],
+              ])
+              return coords
+                ? `translate(${coords[0] - markerSize / 2}, ${coords[1] - markerSize}) scale(1)`
+                : "translate(0, 0)"
+            })
 
           setTooltipData(null)
         })
@@ -276,24 +311,6 @@ export const Arrondissement = ({
             onMarkerClick(d as Marker)
           }
         })
-
-      // Animation d'apparition progressive
-      if (animateMarkers) {
-        markerGroups
-          .transition()
-          .delay((d, i) => i * animationDelay)
-          .duration(animationDuration)
-          .style("opacity", 1)
-      }
-
-      // Icônes SVG personnalisées
-      markerGroups
-        .append("path")
-        .attr("d", "M0 0 C-5 -12 5 -12 0 0 M 0 -12 a 6 6 0 1 1 0 -0.1")
-        .attr("fill", markerColor)
-        .attr("stroke", "#333")
-        .attr("stroke-width", 1)
-        .attr("transform", `scale(${markerSize})`)
     }
   }, [
     geoData,

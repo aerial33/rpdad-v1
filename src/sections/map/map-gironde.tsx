@@ -1,8 +1,11 @@
 "use client"
 
+import Link from "next/link"
+
 import { Arrondissement } from "@/components/geomap/arrondissement"
 import { FadeUp } from "@/components/motion/animations"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
 
 //! todo: fix the clickable map
 
@@ -42,7 +45,7 @@ export default function MapGirondeSection() {
     <section className="py-12">
       <FadeUp>
         <div className="center-element mb-8 grid grid-cols-1 gap-4 md:grid-cols-2">
-          <FadeUp className="p-4">
+          <FadeUp className="self-center p-4">
             <Badge
               variant={"outline"}
               className="bg-flamingo-light text-md mb-4 text-white"
@@ -59,7 +62,7 @@ export default function MapGirondeSection() {
                 "Le Réseau Public Départemental d'Aide à Domicile de la Gironde compte à ce jour 32 services membres. Il s'agit exclusivement de services publics de proximité :"
               }
             </p>
-            <ul className="mt-4 list-disc pl-5 text-gray-500">
+            <ul className="my-4 list-disc pl-5 text-gray-500">
               <li>{"Centres Communaux d'Action Sociale (CCAS)"}</li>
               <li>{"Centres Intercommunaux d'Action Sociale (CIAS)"}</li>
             </ul>
@@ -90,6 +93,12 @@ export default function MapGirondeSection() {
               )}
             </motion.div>
           )} */}
+            <Button
+              variant={"outline"}
+              className="bg-primary text-md mt-8 mb-4 text-white"
+            >
+              <Link href={"/services-membres"}>{"Voir tous les services"}</Link>
+            </Button>
           </FadeUp>
           <div className="p-4">
             {/* <MapGironde
