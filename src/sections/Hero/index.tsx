@@ -25,7 +25,11 @@ type HeroComponentType = React.ComponentType<BaseHeroProps>
 export type HeroSelectorProps = BaseHeroProps & {
   variant: HeroVariant
 } & (
-    | { variant: "mini"; title?: string; description?: string }
+    | {
+        variant: "mini" | "logo" | "split"
+        title?: string
+        description?: string
+      }
     | { variant: "logo" | "split" | "split-image-form" | "img-grid" }
   )
 

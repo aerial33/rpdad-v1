@@ -131,7 +131,7 @@ export const Arrondissement = ({
   ],
   markerColor = "oklch(53.43% 0.1988 340.64)",
   markerHoverColor = "oklch(53.43% 0.1988 340.64)",
-  markerSize = 1.5,
+  markerSize = 1.9,
   animateMarkers = false,
   animationDelay = 100,
   animationDuration = 300,

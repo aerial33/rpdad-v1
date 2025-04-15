@@ -139,6 +139,7 @@ export const megaNavItems = [
 interface NavItem {
   label: string
   path: string
+  icon?: string
   subMenus?: {
     title: string
     items: { label: string; description: string; href: string }[]
@@ -147,7 +148,12 @@ interface NavItem {
 export const navRpdad: NavItem[] = [
   {
     label: "Accueil",
+    icon: "Home",
     path: "/",
+  },
+  {
+    label: "Le RPDAD",
+    path: "/le-rpdad",
   },
   {
     label: "Nos membres",
