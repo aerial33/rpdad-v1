@@ -44,9 +44,9 @@ export function HeroLogo({
             <h1 className="text-foreground mb-4 max-w-4xl text-4xl font-semibold text-balance lg:text-center lg:text-5xl lg:leading-tight">
               {title || "Le RPDAD"}
             </h1>
-            <h3 className="text-muted-foreground">
+            <p className="text-muted-foreground text-[1.05rem] leading-[1.6] font-medium">
               <Balancer>{description}</Balancer>
-            </h3>
+            </p>
             <div className="!mt-8 flex items-center gap-2">
               <Button>Contactez-nous</Button>
             </div>

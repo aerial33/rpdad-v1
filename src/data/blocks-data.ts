@@ -47,6 +47,14 @@ const Blocks: Block[] = [
     image: "/images/corporate/blog.png",
     link: "/corporate/blog",
   },
+  {
+    id: "6",
+    title: "Content",
+    description:
+      "Blocks of Content are arranged to create a cohesive and visually appealing design.",
+    image: "/images/corporate/content.png",
+    link: "/corporate/content",
+  },
 ]
 
 export default Blocks

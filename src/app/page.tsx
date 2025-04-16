@@ -1,7 +1,7 @@
+import { ContentOne } from "@/blocks/contents/ContentOne"
 import { DynamicHeroSelector } from "@/components/selectors/HeroSelector"
 import AgendaEvents from "@/sections/agenda/event-section"
 import { BentoDemo } from "@/sections/bento/bento-demo"
-import { SectionContact } from "@/sections/contact/section-contact"
 import EditorialSection from "@/sections/editorial/editorial"
 import MapGirondeSection from "@/sections/map/map-gironde"
 
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex-1">
       <DynamicHeroSelector />
       <EditorialSection />
-      <SectionContact />
+      <ContentOne />
       <MapGirondeSection />
       <AgendaEvents />
       <BentoDemo />

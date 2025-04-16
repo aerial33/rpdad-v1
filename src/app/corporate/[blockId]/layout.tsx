@@ -1,11 +1,6 @@
 import Link from "next/link"
 
-import {
-  Card,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card"
+import { Card, CardHeader, CardTitle } from "@/components/ui/card"
 import Blocks from "@/data/blocks-data"
 import { HeroSelector } from "@/sections/Hero"
 
@@ -39,7 +34,6 @@ export default async function CorporateLayout({
             <Card className="to-primary-lightest border-flamingo hover:to-primary-lighter h-auto bg-gradient-to-b from-white transition-colors duration-300 hover:bg-gradient-to-b hover:shadow-md">
               <CardHeader>
                 <CardTitle>{block.title}</CardTitle>
-                <CardDescription>{block.description}</CardDescription>
               </CardHeader>
             </Card>
           </Link>

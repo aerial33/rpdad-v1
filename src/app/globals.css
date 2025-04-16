@@ -241,4 +241,31 @@
   .center-element {
     @apply container mx-auto px-4;
   }
+  .highlight-underline {
+    @apply relative z-[2] whitespace-nowrap;
+  }
+  .highlight-underline::after {
+    content: "";
+    @apply absolute bottom-[5%] left-[-1.5%] z-[-1] block h-[30%] w-[102.5%] rounded-[5rem] transition-all duration-[0.2s] ease-in-out motion-reduce:transition-none;
+    background-color: var(--color-chateau-light, oklch(73.92% 0.1111 153.06));
+  }
+  /* Déclinaisons dynamiques avec les couleurs Tailwind */
+  .highlight-underline-flamingo::after {
+    background-color: var(--color-flamingo-light);
+  }
+  .highlight-underline-picton-blue::after {
+    background-color: var(--color-picton-blue-light);
+  }
+  .highlight-underline-yellow::after {
+    background-color: var(--color-yellow-light);
+  }
+  .highlight-underline-primary::after {
+    background-color: var(--color-primary-light);
+  }
+}
+
+@layer components {
+  .feature-paragraph {
+    @apply mb-3 text-xl leading-7 font-light text-gray-500 md:text-2xl md:leading-8;
+  }
 }

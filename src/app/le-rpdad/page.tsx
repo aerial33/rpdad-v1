@@ -1,5 +1,5 @@
+import { FeatureOne } from "@/blocks/features/FeatureOne"
 import { HeroSelector } from "@/sections/Hero"
-import NotreMission from "@/sections/features/NotreMission"
 
 const LeRPDAD = () => {
   return (
@@ -9,7 +9,7 @@ const LeRPDAD = () => {
         title="Le Réseau Public Départemental d'Aide à Domicile de la Gironde"
         description="La présentation du Réseau Public Départemental d'Aide à Domicile de la Gironde"
       />
-      <NotreMission />
+      <FeatureOne />
     </div>
   )
 }
