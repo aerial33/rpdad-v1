@@ -24,7 +24,7 @@ export const Header = ({
   return (
     <header className={cn(className, "bg-transparent")}>
       <div className="container mx-auto flex items-center justify-between px-4 py-6 xl:px-0">
-        <div className="flex w-full items-center gap-7 xl:w-1/2 xl:justify-between">
+        <div className="flex w-full items-center gap-7">
           <Link href="/">
             <RpdadLogo />
           </Link>
