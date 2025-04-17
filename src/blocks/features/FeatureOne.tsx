@@ -67,6 +67,7 @@ export const FeatureOne = () => {
         />
         {/*<!--/.row -->*/}
         <SectionHeader
+          className="pt-16"
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"

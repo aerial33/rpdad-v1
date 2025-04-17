@@ -26,7 +26,7 @@ export function SectionContent({
   return (
     <div
       className={cn(
-        "!mt-[50px] w-full max-w-full flex-[0_0_auto] !px-[15px] lg:w-6/12 lg:!px-[20px] xl:w-6/12 xl:!px-[35px]",
+        "!mt-[50px] w-full max-w-full flex-[0_0_auto] px-[15px] lg:w-6/12 lg:px-[20px] xl:w-6/12 xl:px-[35px]",
         className
       )}
     >

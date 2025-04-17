@@ -1,3 +1,4 @@
+import { HistoryAbout } from "@/blocks/about/HistoryAbout"
 import { FeatureOne } from "@/blocks/features/FeatureOne"
 import { HeroSelector } from "@/sections/Hero"
 
@@ -10,6 +11,7 @@ const LeRPDAD = () => {
         description="La présentation du Réseau Public Départemental d'Aide à Domicile de la Gironde"
       />
       <FeatureOne />
+      <HistoryAbout />
     </div>
   )
 }

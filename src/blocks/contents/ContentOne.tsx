@@ -48,9 +48,9 @@ export function ContentOne() {
         ]}
         highlight="accompagnons"
         buttonText="Retrouvez notre réseau"
-        buttonHref="/membres"
+        buttonHref="/services-membres"
         buttonIcon={<ArrowRight />}
-        bgClass=""
+        bgClass=" py-16"
       />
     </>
   )

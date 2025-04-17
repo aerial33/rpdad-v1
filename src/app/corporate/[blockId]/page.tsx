@@ -1,3 +1,4 @@
+import { HistoryAbout } from "@/blocks/about"
 import {
   ContentFeature,
   ContentOne,
@@ -5,7 +6,10 @@ import {
   ContentTwo,
 } from "@/blocks/contents"
 import { FeatureOne } from "@/blocks/features"
+import { TeamsCaroussel } from "@/blocks/teams"
+import BlogSection from "@/components/blog-content/content-blog"
 import Blocks from "@/data/blocks-data"
+import StatisticSection from "@/sections/stat/statistic"
 
 type Params = {
   params: Promise<{ blockId: string }>
@@ -29,6 +33,7 @@ const CorporateBlockPage = async ({ params }: Params) => {
       {block.title === "Features" && (
         <div className="">
           <FeatureOne />
+          <StatisticSection />
         </div>
       )}
       {block.title === "Content" && (
@@ -37,6 +42,17 @@ const CorporateBlockPage = async ({ params }: Params) => {
           <ContentTwo />
           <ContentThree />
           <ContentFeature />
+        </div>
+      )}
+      {block.title === "About" && (
+        <div className="">
+          <HistoryAbout />
+          <TeamsCaroussel />
+        </div>
+      )}
+      {block.title === "Blog" && (
+        <div className="">
+          <BlogSection />
         </div>
       )}
     </div>
