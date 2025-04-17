@@ -1,4 +1,9 @@
-import { ContentOne, ContentThree, ContentTwo } from "@/blocks/contents"
+import {
+  ContentFeature,
+  ContentOne,
+  ContentThree,
+  ContentTwo,
+} from "@/blocks/contents"
 import { FeatureOne } from "@/blocks/features"
 import Blocks from "@/data/blocks-data"
 
@@ -31,6 +36,7 @@ const CorporateBlockPage = async ({ params }: Params) => {
           <ContentOne />
           <ContentTwo />
           <ContentThree />
+          <ContentFeature />
         </div>
       )}
     </div>
