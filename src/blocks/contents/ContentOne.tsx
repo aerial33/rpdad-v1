@@ -43,10 +43,11 @@ export function ContentOne() {
         }
         title="Nos Services Membres"
         paragraphs={[
-          "Ensemble, améliorons la qualité de vie à domicile. Nous accompagnons plus de 5000 personnes âgées et en situation de handicap en Gironde.",
-          "Le RPDAD est un réseau de professionnels dévoués qui offre des services d'aide à domicile personnalisés. Nos agents de la fonction publique sont formés pour vous aider dans les actes de la vie quotidienne et favoriser votre autonomie dans un environnement familier et sécurisé.",
+          "Créé en 2010, le Réseau Public Départemental d'Aide à Domicile de la Gironde compte à ce jour 33 services membres au 1er janvier 2025.",
+          "Il s'agit exclusivement de services publics de proximité : Centres Communaux d'Action Sociale (CCAS), Centres Intercommunaux d'Action Sociale (CIAS)",
+          "Ces services, par leur présence sur 194 communes de Gironde et leur proximité, constituent d'incontournables acteurs de l'aide à domicile. Chaque service intervient sur un périmètre géographique clairement délimité.",
         ]}
-        highlight="accompagnons"
+        highlight="services membres"
         buttonText="Retrouvez notre réseau"
         buttonHref="/services-membres"
         buttonIcon={<ArrowRight />}

@@ -4,28 +4,27 @@ export function ContentTwo() {
   return (
     <section className="bg-white py-16 md:py-32">
       <EcosystemSection
-        title="The Lyra ecosystem brings together our models."
+        title="La force d’un réseau public de proximité"
         image={{
           src: "/img/about-7.jpg",
-          alt: "payments illustration light",
+          alt: "Réseau public",
           width: 1207,
           height: 929,
         }}
         paragraphs={[
           <>
-            Gemini is evolving to be more than just the models.{" "}
-            <span className="gradient-primary font-bold">
-              It supports an entire ecosystem
-            </span>{" "}
-            — from products innovate.
+            Le RPDAD s’appuie sur la coopération de{" "}
+            <span className="font-bold">33 services membres</span> et de
+            nombreux partenaires institutionnels pour garantir un accompagnement
+            de qualité sur tout le territoire girondin.
           </>,
-          "It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate",
+          "Notre visibilité contribue à développer des partenariats sur les territoires, en articulant social, médico-social et sanitaire avec nos partenaires (CD33, CARSAT, MSA, SSI, MDPH…).",
         ]}
         quote={{
-          text: "Using TailsUI has been like unlocking a secret design superpower. It's the perfect fusion of simplicity and versatility, enabling us to create UIs that are as stunning as they are user-friendly.",
-          author: "John Doe, CEO",
-          logoSrc: "https://html.tailus.io/blocks/customers/nvidia.svg",
-          logoAlt: "Nvidia Logo",
+          text: "« Agir pour tout le monde, en particulier » est notre devise. « Vous accompagner dans votre parcours quotidien » est notre engagement.",
+          author: "Le RPDAD",
+          logoSrc: "/img/logo-rpdad.png",
+          logoAlt: "Logo RPDAD",
         }}
       />
     </section>

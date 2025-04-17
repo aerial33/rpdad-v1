@@ -11,8 +11,8 @@ export const FeatureOne = () => {
       <div className="container mx-auto px-4 py-[4.5rem] md:!py-24 lg:!py-24 xl:!py-24">
         <FeatureSection
           title="Notre mission"
-          mainText="We are a digital and branding company that believes in the power of creative strategy and along with great design."
-          secondaryText="Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et."
+          mainText="Le projet de service du RPDAD vise à simplifier le parcours des bénéficiaires en prenant en compte votre projet et vos besoins."
+          secondaryText="Avec vous, nous souhaitons construire des solutions individuelles pour faciliter votre quotidien, préserver votre autonomie, développer votre pouvoir d'agir et améliorer la santé de chacun. Le développement de projets innovants nous permet de moderniser l'organisation des services et de renforcer la professionnalisation et la qualité de vie au travail des 1200 agents. Ce fonctionnement sert une véritable politique publique et favorise une reconnaissance des métiers."
           icon={
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -91,40 +91,48 @@ export const FeatureOne = () => {
               ></path>
             </svg>
           }
-          title="Here are 3 working steps to organize our business projects."
+          title="Les étapes clés de notre accompagnement"
         />
 
         <div className="mx-[-15px] !mt-[-50px] flex flex-wrap items-center lg:mx-[-20px] xl:mx-[-35px]">
           <div className="!mt-[50px] w-full max-w-full flex-[0_0_auto] !px-[15px] lg:!order-2 lg:w-6/12 lg:!px-[20px] xl:!order-2 xl:w-6/12 xl:!px-[35px]">
             <FeatureCard
               number="01"
-              title="Finalize Product"
-              description="Nulla vitae elit libero pharetra augue dapibus."
+              title="Solutions individuelles"
+              description="Avec vous, nous construisons des solutions pour faciliter votre quotidien et préserver votre autonomie."
               numberBgClass="bg-primary-lighter text-primary"
               className="border-primary max-w-[580px] lg:mr-6 xl:mr-6"
             />
             <FeatureCard
               number="02"
-              title="Finalize Product"
-              description="Nulla vitae elit libero pharetra augue dapibus."
+              title="Esprit de coopération"
+              description="Nos agents interviennent dans un esprit de coopération avec vous et les acteurs locaux."
               numberBgClass="bg-picton-blue-lighter text-picton-blue"
               className="border-picton-blue mt-6 max-w-[580px] lg:ml-16 xl:ml-16"
             />
             <FeatureCard
               number="03"
-              title="Finalize Product"
-              description="Nulla vitae elit libero pharetra augue dapibus."
+              title="Projets innovants"
+              description="Nous modernisons l'organisation des services et renforçons la professionnalisation de nos équipes."
               numberBgClass="bg-flamingo-lighter text-flamingo"
               className="border-flamingo mt-6 max-w-[580px] lg:mx-6 xl:mx-6"
             />
           </div>
 
           <SectionContent
-            title="How It Works?"
+            title="Nos missions"
             paragraphs={[
-              "Find out everything you need to know and more about how we create our business process models.",
-              "Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Nullam quis risus eget urna mollis ornare.",
-              "Nullam id dolor id nibh ultricies vehicula ut id elit. Vestibulum id ligula porta felis euismod semper. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis. Vestibulum id ligula porta felis.",
+              "Représenter et défendre les SAAD publics du réseau.",
+              "Soutenir les SAAD par une stratégie de recrutement et d'attractivité des métiers.",
+              "Favoriser l'harmonisation des pratiques RH.",
+              "Intégrer la prévention dans les missions des SAAD (bien vieillir, lutte contre l'isolement).",
+              "Proposer des formations aux agents de terrain et au personnel administratif.",
+              "Renforcer la qualité de service des SAAD.",
+              "Partager les bonnes pratiques.",
+              "Participer à des projets d'intérêt général pour les SAAD publics du réseau.",
+              "Soutenir et accompagner les projets de développement territorial.",
+              "Conduire et actualiser le projet de service.",
+              "Encadrer les ressources humaines et gérer les moyens dédiés à ces missions.",
             ]}
             buttonText="En savoir plus"
             buttonHref="#"

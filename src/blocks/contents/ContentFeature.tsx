@@ -1,5 +1,4 @@
-import { Zap } from "lucide-react"
-import { Cpu } from "lucide-react"
+import { Cpu, Zap } from "lucide-react"
 
 import { EcosystemFeatureSectionResponsive } from "@/sections/sections/content/ContentFlexible"
 
@@ -7,37 +6,43 @@ export const ContentFeature = () => {
   return (
     <EcosystemFeatureSectionResponsive
       className="mt-24"
-      title="The Lyra ecosystem brings together our models."
+      title="Un service de qualité reconnu"
       paragraphs={[
         <>
-          Lyra is evolving to be more than just the models.{" "}
-          <span className="text-title font-medium">
-            It supports an entire ecosystem
-          </span>{" "}
-          — from products innovate.
+          Tous les services publics membres du Réseau Public Départemental
+          d’Aide à Domicile sont détenteurs du label{" "}
+          <span className="font-bold">« Service d’aide à Domicile »</span>{" "}
+          délivré par le Conseil Départemental de la Gironde.
         </>,
-        "It supports an entire ecosystem — from products to the APIs and platforms helping developers and businesses innovate",
+        "Ce label, créé en 2009, permet aux personnes âgées et à leur entourage de mieux connaître et reconnaître le réseau d'aide mis en place dans le département.",
       ]}
       features={[
         {
           icon: <Zap className="size-4" />,
-          title: "Faaast",
-          description: "It supports an entire helping developers and innovate.",
+          title: "Label qualité",
+          description:
+            "Respect du Cahier des Charges National et Départemental garantissant la qualité de l'intervention à domicile.",
         },
         {
           icon: <Cpu className="size-4" />,
-          title: "Powerful",
+          title: "Charte d'accompagnement",
           description:
-            "It supports an entire helping developers and businesses.",
+            "Charte « Accompagner une personne âgée dépendante et/ou une personne handicapée à son domicile ».",
+        },
+        {
+          icon: <Zap className="size-4" />,
+          title: "Droits et Libertés",
+          description:
+            "Charte des « Droits et Libertés de la Personne Accueillie ».",
         },
       ]}
       image={{
         src: "/about-9.jpg",
-        alt: "payments illustration light",
+        alt: "Label qualité",
         fill: true,
       }}
-      imagePosition="left" // ou "right"
-      featuresColumns={{ base: 2, md: 2, xl: 3 }} // 1 colonne mobile, 2 en md, 3 en xl
+      imagePosition="left"
+      featuresColumns={{ base: 2, md: 2, xl: 3 }}
     />
   )
 }
