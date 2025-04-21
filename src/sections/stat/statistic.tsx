@@ -1,66 +1,71 @@
-import { Image } from "lucide-react"
+// import { Image } from "lucide-react"
+import Image from "next/image"
 
+import { Stat } from "@/components/Stat"
 import { Badge } from "@/components/ui/badge"
 
-interface StatProps {
+interface StatItem {
   value: string
   label: string
   showDot?: boolean
 }
 
-function Stat({ value, label, showDot = false }: StatProps) {
-  return (
-    <div className="relative text-center lg:text-left">
-      <div className="gradient-primary mb-2 text-3xl font-bold xl:text-4xl">
-        {value}
-      </div>
-      <div className="text-left text-xs tracking-wider text-gray-500">
-        {label}
-      </div>
-      {showDot && (
-        <div className="bg-flamingo-light absolute top-1/2 hidden h-4 w-4 translate-y-2 transform rounded-full md:-right-12 md:block lg:-right-5" />
-      )}
-    </div>
-  )
+interface StatsSectionProps {
+  image: {
+    src: string
+    alt: string
+  }
+  badgeText?: string
+  title: string
+  description: string
+  stats: StatItem[]
 }
 
-export default function StatisticSection() {
+export function StatsSection({
+  image,
+  badgeText,
+  title,
+  description,
+  stats,
+}: StatsSectionProps) {
   return (
-    <section className="bg-primary-lightest grid grid-cols-1 gap-6 rounded-t-4xl py-12 md:gap-16 lg:grid-cols-2">
-      <div className="relative flex items-center justify-center overflow-hidden rounded-2xl bg-gray-300 xl:max-w-[80%]">
-        <Image width={100} height={100} color="gray" />
-        {/* <Image
-          src="/images/statistic.jpg"
-          alt="Statistic"
-          width={1000}
-          height={1000}
-        /> */}
+    <section className="bg-primary-lightest grid grid-cols-1 gap-6 px-4 py-12 md:gap-16 lg:grid-cols-2 lg:px-0">
+      <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl">
+        {/* <Image width={100} height={100} color="gray" /> */}
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          objectFit="cover"
+          objectPosition="top"
+        />
       </div>
 
       <div className="mx-auto max-w-6xl">
         {/* Editorial Header */}
         <div className="flex items-center gap-4">
-          <div className="bg-primary h-60 w-1" />
+          <div className="bg-primary h-60 w-2 rounded" />
           <div className="flex flex-col gap-4">
-            <Badge className="font-medium text-white">Editorial</Badge>
-            <h2 className="text-gray-800">
-              {"Se fédérer pour exister, résister, s'améliorer et innover"}
-            </h2>
-
-            <p className="max-w-3xl text-gray-500 md:text-lg">
-              {
-                "Le Réseau Public Départemental d'Aide à Domicile de la Gironde accompagne près de 5000 personnes âgées et personnes en situation de handicap qui choisissent de vivre à domicile."
-              }
-            </p>
+            {badgeText && (
+              <Badge variant={"outline"} className="border-primary font-medium">
+                {badgeText}
+              </Badge>
+            )}
+            <h2 className="text-gray-800">{title}</h2>
+            <p className="max-w-3xl text-gray-500 md:text-lg">{description}</p>
           </div>
         </div>
 
         {/* Stats Grid */}
         <div className="mt-12 grid grid-cols-1 justify-items-center gap-8 md:grid-cols-2 lg:justify-items-start xl:grid-cols-4">
-          <Stat value="32" label="CCAS et CIAS membres" showDot={true} />
-          <Stat value="+1200" label="Professionnels de terrain" />
-          <Stat value="700 000" label="Heures réalisées" showDot={true} />
-          <Stat value="192" label="Communes d'intervention" />
+          {stats.map((stat, i) => (
+            <Stat
+              key={i}
+              value={stat.value}
+              label={stat.label}
+              showDot={stat.showDot}
+            />
+          ))}
         </div>
       </div>
     </section>
