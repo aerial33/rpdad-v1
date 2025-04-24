@@ -8,27 +8,42 @@ import useMeasure from "react-use-measure"
 
 import { Badge } from "@/components/ui/badge"
 
-const CARD_WIDTH = 350
+/**
+ * Composant client pour un carrousel d'équipe
+ *
+ * Ce composant utilise Framer Motion pour créer un carrousel défilant
+ * qui affiche les membres de l'équipe du RPDAD.
+ */
+
+// Constantes pour définir les dimensions des cartes
+const CARD_WIDTH = 400
 const MARGIN = 20
 const CARD_SIZE = CARD_WIDTH + MARGIN
 
+// Points de rupture pour la mise en page responsive
 const BREAKPOINTS = {
   sm: 640,
   lg: 1024,
 }
 
-const BlogPostCarousel = () => {
+export const TeamsCaroussel = () => {
+  // Utilisation de useMeasure pour obtenir la largeur du conteneur
   const [ref, { width }] = useMeasure()
+  // État pour suivre le décalage du carrousel
   const [offset, setOffset] = useState(0)
 
+  // Calcul du nombre de cartes visibles en fonction de la largeur
   const CARD_BUFFER =
     width > BREAKPOINTS.lg ? 3 : width > BREAKPOINTS.sm ? 2 : 1
 
+  // Vérification si le défilement vers la gauche est possible
   const CAN_SHIFT_LEFT = offset < 0
 
+  // Vérification si le défilement vers la droite est possible
   const CAN_SHIFT_RIGHT =
     Math.abs(offset) < CARD_SIZE * (posts.length - CARD_BUFFER)
 
+  // Fonction pour défiler vers la gauche
   const shiftLeft = () => {
     if (!CAN_SHIFT_LEFT) {
       return
@@ -36,6 +51,7 @@ const BlogPostCarousel = () => {
     setOffset((pv) => (pv += CARD_SIZE))
   }
 
+  // Fonction pour défiler vers la droite
   const shiftRight = () => {
     if (!CAN_SHIFT_RIGHT) {
       return
@@ -45,7 +61,8 @@ const BlogPostCarousel = () => {
 
   return (
     <section className="py-8 md:py-16 lg:py-24" ref={ref}>
-      <div className="mx-auto flex max-w-7xl flex-row items-center justify-between gap-6 px-6">
+      <div className="container mx-auto flex flex-row items-center justify-between px-6">
+        {/* En-tête et contrôles du carrousel */}
         <div className="flex h-[300px] flex-col justify-between p-6">
           <Badge className="font-sm border-flamingo" variant={"outline"}>
             {"Le collectif"}
@@ -53,6 +70,7 @@ const BlogPostCarousel = () => {
           <h2 className="mb-4 text-3xl text-balance md:text-4xl">
             L'Équipe du RPDAD
           </h2>
+          {/* Boutons de navigation */}
           <div className="flex items-center gap-2">
             <button
               className={`rounded-lg border-[1px] border-neutral-400 bg-white p-1.5 text-2xl transition-opacity ${
@@ -74,6 +92,7 @@ const BlogPostCarousel = () => {
             </button>
           </div>
         </div>
+        {/* Conteneur du carrousel avec animation */}
         <div
           className="relative overflow-hidden"
           style={{ width: CARD_SIZE * CARD_BUFFER }}
@@ -84,6 +103,7 @@ const BlogPostCarousel = () => {
             className="flex"
             style={{ width: CARD_SIZE * posts.length }}
           >
+            {/* Rendu de chaque carte de membre */}
             {posts.map((post) => (
               <Post key={post.id} {...post} />
             ))}
@@ -94,30 +114,39 @@ const BlogPostCarousel = () => {
   )
 }
 
+/**
+ * Composant pour afficher une carte de membre individuelle
+ */
 const Post = ({ imgUrl, author, title, description }: PostType) => {
   return (
     <div
-      className="border-primary relative shrink-0 cursor-pointer rounded-2xl border p-6 transition-transform hover:-translate-y-1"
+      className="border-primary relative flex shrink-0 items-center justify-center gap-2 rounded-2xl border-2 p-6 transition-transform"
       style={{
         width: CARD_WIDTH,
         marginRight: MARGIN,
       }}
     >
+      {/* Image du membre */}
       <img
         src={imgUrl}
-        className="mb-3 h-[200px] w-full rounded-lg object-cover"
-        alt={`An image for a fake blog post titled ${title}`}
+        className="mb-3 h-40 w-40 rounded-full object-cover"
+        alt={`image of ${title}`}
       />
-      <span className="rounded-md border-[1px] border-neutral-500 px-1.5 py-1 text-xs text-neutral-500 uppercase">
-        {author}
-      </span>
-      <p className="mt-1.5 text-lg font-medium">{title}</p>
+      {/* Rôle du membre */}
+      <div className="flex flex-col items-center justify-center">
+        <span className="border-primary text-primary rounded-md border-[1px] px-1.5 py-1 uppercase">
+          {author}
+        </span>
+        {/* Nom du membre */}
+        <p className="mt-1.5 text-sm font-medium">{title}</p>
+      </div>
     </div>
   )
 }
 
-export default BlogPostCarousel
-
+/**
+ * Type pour les données des membres de l'équipe
+ */
 type PostType = {
   id: number
   imgUrl: string
@@ -126,18 +155,22 @@ type PostType = {
   description: string
 }
 
+/**
+ * Données des membres de l'équipe
+ * À remplacer par les vraies données des membres du RPDAD
+ */
 const posts: PostType[] = [
   {
     id: 1,
-    imgUrl: "/imgs/blog/1.png",
-    author: "John Anderson",
-    title: "We built an AI chess bot with ChatGPT",
+    imgUrl: "/img/teams/profil-1.jpg",
+    author: "Marine GASNIER",
+    title: "Directrice du RPDAD",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },
   {
     id: 2,
-    imgUrl: "/imgs/blog/2.png",
+    imgUrl: "/img/teams/profil-2.jpg",
     author: "Kyle Parsons",
     title: "How to grow your personal brand as a web designer",
     description:
@@ -145,7 +178,7 @@ const posts: PostType[] = [
   },
   {
     id: 3,
-    imgUrl: "/imgs/blog/3.png",
+    imgUrl: "/img/teams/profil-3.jpg",
     author: "Andrea Bates",
     title: "Calm down, monoliths are totally fine",
     description:
@@ -153,7 +186,7 @@ const posts: PostType[] = [
   },
   {
     id: 4,
-    imgUrl: "/imgs/blog/4.png",
+    imgUrl: "/img/teams/profil-4.jpg",
     author: "Jess Drum",
     title: "A quick guide to Framer Motion (for dummies)",
     description:
@@ -161,7 +194,7 @@ const posts: PostType[] = [
   },
   {
     id: 5,
-    imgUrl: "/imgs/blog/5.png",
+    imgUrl: "/img/teams/profil-5.jpg",
     author: "Phil White",
     title: "You probably don't need kubernetes",
     description:
@@ -169,17 +202,9 @@ const posts: PostType[] = [
   },
   {
     id: 6,
-    imgUrl: "/imgs/blog/6.png",
-    author: "Karen Peabody",
-    title: "State of JavaScript in 2024",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
-  },
-  {
-    id: 7,
-    imgUrl: "/imgs/blog/7.png",
-    author: "Dante Gordon",
-    title: "What's new in Python?",
+    imgUrl: "/img/teams/profil-1.jpg",
+    author: "Marine GASNIER",
+    title: "Directrice du RPDAD",
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, dolor.",
   },

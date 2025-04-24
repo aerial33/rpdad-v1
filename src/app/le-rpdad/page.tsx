@@ -1,5 +1,6 @@
 import { HistoryAbout } from "@/blocks/about/HistoryAbout"
 import { FeatureOne } from "@/blocks/features/FeatureOne"
+import { TeamsCaroussel } from "@/blocks/teams"
 import { HeroSelector } from "@/sections/Hero"
 
 const LeRPDAD = () => {
@@ -12,6 +13,7 @@ const LeRPDAD = () => {
       />
       <FeatureOne />
       <HistoryAbout />
+      <TeamsCaroussel />
     </div>
   )
 }

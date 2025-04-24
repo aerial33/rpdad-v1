@@ -19,6 +19,7 @@ interface StatsSectionProps {
   title: string
   description: string
   stats: StatItem[]
+  bg?: string
 }
 
 export function StatsSection({
@@ -27,9 +28,12 @@ export function StatsSection({
   title,
   description,
   stats,
+  bg,
 }: StatsSectionProps) {
   return (
-    <section className="bg-primary-lightest grid grid-cols-1 gap-6 px-4 py-12 md:gap-16 lg:grid-cols-2 lg:px-0">
+    <section
+      className={`bg-${bg} grid grid-cols-1 gap-6 px-4 py-12 md:gap-16 lg:grid-cols-2 lg:px-0`}
+    >
       <div className="relative flex aspect-video items-center justify-center overflow-hidden rounded-2xl">
         {/* <Image width={100} height={100} color="gray" /> */}
         <Image

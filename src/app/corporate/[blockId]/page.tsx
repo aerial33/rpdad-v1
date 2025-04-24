@@ -6,7 +6,7 @@ import {
   ContentTwo,
 } from "@/blocks/contents"
 import { FeatureOne } from "@/blocks/features"
-import { TeamBlock, TeamsCaroussel } from "@/blocks/teams"
+import { TeamsCaroussel } from "@/blocks/teams"
 import BlogSection from "@/components/blog-content/content-blog"
 import Blocks from "@/data/blocks-data"
 import { LeRpdadStatsSection } from "@/sections/stat/LeRpdadStatsSection"
@@ -48,9 +48,6 @@ const CorporateBlockPage = async ({ params }: Params) => {
         <div className="">
           <HistoryAbout />
           <TeamsCaroussel />
-          <div className="my-24">
-            <TeamBlock />
-          </div>
         </div>
       )}
       {block.title === "Blog" && (

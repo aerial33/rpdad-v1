@@ -63,13 +63,13 @@ export const HistoryAbout = ({ className }: { className?: string }) => {
               </div>
 
               <SectionContent
-                title="Notre Histoire"
+                title="Aux Origines du RPDAD, un Réseau Solidaire"
                 paragraphs={[
                   "Le Réseau Public Départemental d'Aide à Domicile de la Gironde a été créé en 2010 pour répondre aux besoins croissants d'accompagnement des personnes âgées et en situation de handicap.",
                   "Né de la volonté de directeurs de CCAS porteurs de SAAD publics, le réseau s'est progressivement structuré pour mutualiser les forces et permettre aux services d'aide à domicile de continuer à exercer leur mission essentielle.",
                   "Aujourd'hui, avec 33 services membres, 1200 agents et une présence sur 194 communes, le RPDAD est un acteur majeur de l'aide à domicile en Gironde, reconnu pour la qualité de ses services et son engagement auprès des 5000 personnes accompagnées.",
                 ]}
-                buttonText="En savoir plus"
+                buttonText="Notre réseau"
                 buttonHref="#"
                 buttonIcon={<ArrowUpRight />}
               />
@@ -87,12 +87,12 @@ export const HistoryAbout = ({ className }: { className?: string }) => {
               >
                 <SectionContent
                   className="sticky top-20 w-full max-w-full px-6 lg:!sticky lg:w-full lg:px-0 xl:w-full xl:px-0"
-                  title="Notre Histoire"
+                  title="L'Histoire du Réseau"
                   paragraphs={[
                     "Découvrez les étapes clés du développement du Réseau Public Départemental d'Aide à Domicile de la Gironde depuis sa création",
                     "Depuis sa création, le réseau a connu une évolution remarquable et maintient un engagement ferme pour l'excellence des services d'aide à domicile, répondant aux besoins spécifiques de tous les Girondins avec professionnalisme et bienveillance.",
                   ]}
-                  buttonText="En savoir plus"
+                  buttonText="Notre réseau"
                   buttonHref="#"
                   buttonIcon={<ArrowUpRight />}
                 />
