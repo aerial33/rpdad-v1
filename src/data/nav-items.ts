@@ -184,10 +184,7 @@ export const navRpdad: NavItem[] = [
       },
     ],
   },
-  {
-    label: "Services",
-    path: "/services",
-  },
+
   // {
   //   label: "Contact",
   //   path: "/contact",

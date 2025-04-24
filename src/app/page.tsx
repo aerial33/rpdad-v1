@@ -11,6 +11,9 @@ export default function Home() {
     <main className="flex-1">
       <DynamicHeroSelector />
       <FadeUp delay={0.3}>
+        <BentoDemo />
+      </FadeUp>
+      <FadeUp delay={0.3}>
         <ContentOne />
       </FadeUp>
       <MapGirondeSection />
@@ -18,7 +21,6 @@ export default function Home() {
       <FadeRight delay={0.3}>
         <FeatureDemo />
       </FadeRight>
-      <BentoDemo />
     </main>
   )
 }

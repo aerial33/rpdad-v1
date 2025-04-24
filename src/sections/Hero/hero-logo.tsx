@@ -20,7 +20,7 @@ export function HeroLogo({
 }) {
   return (
     <>
-      <section className="bg-flamingo-lightest">
+      <section className="from-flamingo-light to-flamingo-lightest bg-gradient-to-t">
         <FadeLeft className="mx-auto flex max-w-7xl gap-6 py-8 md:pt-16">
           <div className="hidden grid-cols-2 grid-rows-2 gap-4 px-4 lg:grid">
             <DotPattern
