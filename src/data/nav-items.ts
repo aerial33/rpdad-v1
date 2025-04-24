@@ -166,23 +166,23 @@ export const navRpdad: NavItem[] = [
   {
     label: "Offres d'emploi",
     path: "/offres-emploi",
-    // subMenus: [
-    //   {
-    //     title: "Emplois",
-    //     items: [
-    //       {
-    //         label: "Postuler à un emploi",
-    //         description: "Postuler à un emploi",
-    //         href: "/offres-emploi/postuler-a-un-emploi",
-    //       },
-    //       {
-    //         label: "Rechercher un emploi",
-    //         description: "Rechercher un emploi",
-    //         href: "/offres-emploi/rechercher-un-emploi",
-    //       },
-    //     ],
-    //   },
-    // ],
+    subMenus: [
+      {
+        title: "Emplois",
+        items: [
+          {
+            label: "Postuler à un emploi",
+            description: "Postuler à un emploi",
+            href: "/emplois",
+          },
+          {
+            label: "Rechercher un emploi",
+            description: "Rechercher un emploi",
+            href: "/emploi",
+          },
+        ],
+      },
+    ],
   },
   {
     label: "Services",

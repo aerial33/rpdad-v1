@@ -36,12 +36,12 @@ export function ServiceGrid({
   const getGridCols = () => {
     switch (columns) {
       case 2:
-        return "sm:grid-cols-1 md:grid-cols-2"
+        return "grid-cols-1 md:grid-cols-2"
       case 4:
-        return "sm:grid-cols-2 lg:grid-cols-4"
+        return "grid-cols-2 lg:grid-cols-4"
       case 3:
       default:
-        return "sm:grid-cols-2 lg:grid-cols-3"
+        return "grid-cols-2 lg:grid-cols-3"
     }
   }
 
@@ -79,7 +79,7 @@ export function ServiceGrid({
                 }
                 alt={item.titre}
                 fill
-                className="absolute rounded-t-2xl object-cover"
+                className="absolute rounded-t-2xl object-cover object-top"
               />
             </div>
             <div className="p-4">
