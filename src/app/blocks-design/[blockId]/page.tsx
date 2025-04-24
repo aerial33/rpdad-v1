@@ -9,6 +9,7 @@ import { FeatureOne } from "@/blocks/features"
 import { TeamsCaroussel } from "@/blocks/teams"
 import BlogSection from "@/components/blog-content/content-blog"
 import Blocks from "@/data/blocks-data"
+import { FeatureBlog } from "@/sections/actualites/FeatureActu"
 import { LeRpdadStatsSection } from "@/sections/stat/LeRpdadStatsSection"
 
 type Params = {
@@ -52,6 +53,7 @@ const CorporateBlockPage = async ({ params }: Params) => {
       )}
       {block.title === "Blog" && (
         <div className="">
+          <FeatureBlog />
           <BlogSection />
         </div>
       )}

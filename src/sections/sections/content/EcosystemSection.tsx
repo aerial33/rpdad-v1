@@ -37,11 +37,11 @@ export function EcosystemSection({
   return (
     <div
       className={cn(
-        "mx-auto max-w-7xl space-y-8 px-6 md:space-y-16",
+        "container mx-auto space-y-8 px-6 md:space-y-16",
         className
       )}
     >
-      <h2 className="relative z-10 max-w-2xl text-4xl font-medium lg:text-5xl">
+      <h2 className="relative z-10 text-4xl font-medium text-balance lg:text-5xl">
         {title}
       </h2>
       <div className="grid grid-cols-1 gap-6 md:gap-12 lg:grid-cols-2 lg:gap-24">
@@ -75,10 +75,10 @@ export function EcosystemSection({
                   <cite className="block font-medium">{quote.author}</cite>
                   {quote.logoSrc && (
                     <img
-                      className="h-5 w-fit dark:invert"
+                      className="h-14 w-fit dark:invert"
                       src={quote.logoSrc}
                       alt={quote.logoAlt || "Logo"}
-                      height={20}
+                      height={40}
                     />
                   )}
                 </div>

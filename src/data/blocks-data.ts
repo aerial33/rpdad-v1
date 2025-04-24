@@ -12,48 +12,48 @@ const Blocks: Block[] = [
     title: "Features",
     description:
       "Blocks of Features are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/features.png",
-    link: "/corporate/features",
+    image: "/images/blocks-design/features.png",
+    link: "/blocks-design/features",
   },
   {
     id: "2",
     title: "About",
     description:
       "Blocks of About are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/about.png",
-    link: "/corporate/about",
+    image: "/images/blocks-design/about.png",
+    link: "/blocks-design/about",
   },
   {
     id: "3",
     title: "Contact",
     description:
       "Blocks of Contact are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/contact.png",
-    link: "/corporate/contact",
+    image: "/images/blocks-design/contact.png",
+    link: "/blocks-design/contact",
   },
   {
     id: "4",
     title: "Call to Action",
     description:
       "Blocks of Call to Action are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/call-to-action.png",
-    link: "/corporate/call-to-action",
+    image: "/images/blocks-design/call-to-action.png",
+    link: "/blocks-design/call-to-action",
   },
   {
     id: "5",
     title: "Blog",
     description:
       "Blocks of Blog are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/blog.png",
-    link: "/corporate/blog",
+    image: "/images/blocks-design/blog.png",
+    link: "/blocks-design/blog",
   },
   {
     id: "6",
     title: "Content",
     description:
       "Blocks of Content are arranged to create a cohesive and visually appealing design.",
-    image: "/images/corporate/content.png",
-    link: "/corporate/content",
+    image: "/images/blocks-design/content.png",
+    link: "/blocks-design/content",
   },
 ]
 
