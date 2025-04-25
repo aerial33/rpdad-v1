@@ -28,9 +28,10 @@ export type Emploi = {
 export async function generateMetadata({
   params,
 }: {
-  params: { slug: string }
+  params: Promise<{ slug: string }>
 }) {
-  const emploi = emplois.find((e) => e.id === params.slug)
+  const { slug } = await params
+  const emploi = emplois.find((e) => e.id === slug)
 
   if (!emploi) {
     return {
@@ -52,9 +53,14 @@ export async function generateStaticParams() {
 }
 
 // Composant principal de la page
-export default function EmploiPage({ params }: { params: { slug: string } }) {
+export default async function EmploiPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>
+}) {
+  const { slug } = await params
   // Récupérer les données de l'emploi correspondant au slug
-  const emploi = emplois.find((e) => e.id === params.slug)
+  const emploi = emplois.find((e) => e.id === slug)
 
   // Si l'emploi n'existe pas, rediriger vers une page 404
   if (!emploi) {
