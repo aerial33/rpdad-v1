@@ -165,7 +165,7 @@ export const navRpdad: NavItem[] = [
   // },
   {
     label: "Offres d'emploi",
-    path: "/offres-emploi",
+    path: "/rechercher-un-emploi",
     subMenus: [
       {
         title: "Emplois",
