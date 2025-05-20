@@ -39,7 +39,7 @@ function FeatureThird({
     <div className="w-full py-16 lg:py-20">
       <div className="container">
         <div
-          className={`mx-auto grid max-h-140 max-w-7xl grid-cols-1 gap-8 overflow-auto rounded-lg border-2 p-8 shadow lg:grid-cols-2 ${className}`}
+          className={`mx-auto grid max-h-140 max-w-7xl grid-cols-1 gap-8 overflow-auto rounded-lg p-8 lg:grid-cols-2 ${className}`}
         >
           <div
             className={`order-2 flex flex-col gap-10 ${imagePosition === "left" ? "lg:order-1" : ""}`}
