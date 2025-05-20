@@ -1,0 +1,147 @@
+{
+  "membres": [
+    {
+      "id": 1,
+      "nom": "Andernos-les-Bains",
+      "type": "Service public de proximité",
+      "fonctionnement": "Mode prestataire",
+      "zone_intervention": "Le SAAD intervient exclusivement sur la commune d’Andernos-les-Bains.",
+      "numéro_enregistrement": "SAP 263300055",
+      "autorité_enregistrement": "DIRECCTE",
+      "coordonnées": {
+        "adresse": "260 Boulevard de la République, 33510 ANDERNOS-LES-BAINS",
+        "téléphone": "05.56.82.89.98",
+        "emails": [
+          "ccas@andernos-les-bains.com",
+          "p.yazigi@andernos-les-bains.com"
+        ],
+        "site_internet": "http://www.andernoslesbains.fr"
+      },
+      "horaires_accueil": {
+        "lundi": "8h30 - 12h30 / 13h30 - 17h15",
+        "mardi": "8h30 - 12h30",
+        "mercredi": "8h30 - 12h30 / 13h30 - 17h15",
+        "jeudi": "8h30 - 12h30",
+        "vendredi": "8h30 - 12h30 / 13h30 - 17h15",
+        "astreinte": "Plateforme téléphonique disponible en dehors des heures d'ouverture, les week-ends et jours fériés"
+      },
+      "prestations": [
+        "Assistance aux personnes âgées ou handicapées",
+        "Entretien du domicile",
+        "Préparation de repas à domicile",
+        "Courses",
+        "Accompagnement aux courses",
+        "Repassage",
+        "Aide administrative",
+        "Aide à la mobilité"
+      ],
+      "interlocuteurs": "Un responsable du Service d’Aide à Domicile",
+      "le service": [
+        "d'une directrice",
+        "d'un responsable de service",
+        "d'une équipe administrative",
+        "15 aides à domicile qui assurent les prestations prévues dans le cadre de la prise en charge accordée"
+      ],
+      "presentations": [
+        "Le Service d'Aide et d'accompagnement à Domicile du C.C.A.S d'Andernos-les-Bains, vous souhaite la bienvenue. Notre service public de proximité, fonctionne en mode prestataire, et intervient à votre domicile pour préserver votre autonomie. Une prise en charge peut être sollicitée auprès du Conseil Départemental ou des caisses de retraite en fonction de votre autonomie et de vos ressources.",
+        "A l'écoute de vos besoins, notre structure, engagée dans une démarche de qualité, met son expertise et ses compétences à votre service. Nous sommes à votre disposition pour vous recevoir ou vous rencontrer à domicile afin de se concerter pour la mise en place de vos prestations. N'hésitez pas à nous contacter."
+      ],
+      "logo": "url",
+      "lien_site_internet": "www.andernoslesbains.fr"
+    },
+    {
+      "id": 2,
+      "nom": "Audenge",
+      "type": "Service public de proximité",
+      "fonctionnement": "Mode prestataire",
+      "zone_intervention": "Le SAAD intervient exclusivement sur la commune d’Audenge.",
+      "numéro_enregistrement": "SAP263300196",
+      "autorité_enregistrement": "DIRRECTE",
+      "coordonnées": {
+        "adresse": "CCAS d’Audenge, Rue des Haras, 33980 Audenge",
+        "téléphone": "05 57 17 01 15",
+        "emails": ["sad@mairie-audenge.fr"],
+        "site_internet": "http://www.ville-audenge.fr"
+      },
+      "horaires_accueil": {
+        "lundi": "9h00 - 13h00 / 14h00 - 17h00",
+        "mardi": "9h00 - 13h00 / 14h00 - 17h00",
+        "mercredi": "9h00 - 13h00 / 14h00 - 17h00",
+        "vendredi": "9h00 - 13h00 / 14h00 - 16h00",
+        "astreinte": "Plateforme téléphonique disponible en dehors des heures d'ouverture au public ainsi que les week-ends et jours fériés"
+      },
+      "prestations": [
+        "Entretien de la maison et travaux ménagers",
+        "Préparation des repas",
+        "Entretien du linge",
+        "Accompagnement aux courses",
+        "Accompagnement aux déplacements extérieurs (promenade)",
+        "Assistance aux personnes âgées et handicapées à domicile (hors actes médicaux)"
+      ],
+      "interlocuteurs": "Une responsable de service, Une équipe administrative",
+      "le service": [
+        "21 auxiliaires de vie qui accompagnent les personnes âgées ou en situation de handicap dans leur vie quotidienne",
+        "Une équipe administrative"
+      ],
+      "presentations": [
+        "Le Service d'Aide et d'Accompagnement à Domicile du C.C.A.S d'Audenge, vous souhaite la bienvenue. Notre service public de proximité, fonctionne en mode prestataire, et intervient à votre domicile pour préserver ou restaurer votre autonomie ou celle de vos proches, dans le cadre de prises en charge dispensées par le Conseil Départemental ou les Caisses de Retraites et mutuelles en fonction du degré d'évaluation du degré d'autonomie.",
+        "Nous intervenons également en autofinancement, et vous aidons à remplir les dossiers d'aides, tout en assurant un suivi avec nos partenaires.",
+        "D'une grande simplicité pour le bénéficiaire, ce mode de fonctionnement souple, s'adapte parfaitement à votre écoute. Notre structure engagée dans une démarche de qualité met son expertise et ses compétences à votre service.",
+        "Nous sommes à votre disposition pour vous recevoir ou vous rencontrer à domicile afin d'élaborer en concertation les prestations à mettre en place. N'hésitez pas à nous contacter."
+      ],
+      "logo": "url",
+      "lien_site_internet": "www.ville-audenge.fr"
+    },
+    {
+      "id": 3,
+      "nom": "Le Barp",
+      "type": "Service public de proximité",
+      "fonctionnement": "Mode prestataire",
+      "zone_intervention": "Le Service d'Aide et d'Accompagnement à Domicile intervient sur la commune du Barp.",
+      "numéro_enregistrement": "",
+      "autorité_enregistrement": "",
+      "coordonnées": {
+        "adresse": "66 avenue des Pyrénées, 33114 LE BARP",
+        "téléphone": "05.57.71.98.59",
+        "emails": [" ccasaccueil@lebarp.fr"],
+        "site_internet": "www.ville-le-barp.fr"
+      },
+      "horaires_accueil": {
+        "lundi": "09h00 à 12h30",
+        "mardi": "09h00 à 12h30 et de 13h30 à 17h30",
+        "mercredi": "09h00 à 12h30 et de 13h30 à 17h30",
+        "jeudi": "09h00 à 12h30 et de 13h30 à 17h30",
+        "vendredi": "09h00 à 12h30",
+        "astreinte": ""
+      },
+      "prestations": [
+        "Entretien du logement",
+        "Entretien du linge",
+        "Accompagnement aux courses",
+        "Accompagnement à l'extérieur du domicile",
+        "Accompagnement aux déplacements à l'intérieur du domicile",
+        "Préparation des repas",
+        "Accompagnement à la prise des repas",
+        "Soutien des capacités cognitives",
+        "Maintien du lien social"
+      ],
+      "interlocuteurs": "Valérie MAZZARIOL, Agent d'accueil et de coordination, Julie FAURE, Travailleur social, Valentine ARIMON, Directrice",
+      "le service": [
+        "Le Service d'Aide et d'Accompagnement à Domicile du Barp intervient auprès de personnes en situation de handicap, de dépendance ou de perte d'autonomie plus ou moins importante. Il a à cœur d'accompagnemer le maintien à domicile à travers différentes prestations adaptées à la situation de chacun. L'évaluation des besoins se fait en amont et en lien avec les différents partenaires, puis fait l'objet d'une révision régulière. Le plan d'aide est mis en place en accord avec la personne.",
+        "Un agent d'accueil et de coordination",
+        "Un travailleur social",
+        "Une directrice"
+      ],
+      "presentations": [
+        "Engagé depuis 2010 pour proposer un service de proximité, le Service d'Aide et d'Accompagnement à Domicile du Barp continue d'œuvrer chaque jour pour proposer un accompagnement adapté à tous.",
+        "Toujours soucieux d'apporter une solution adaptée et un service de qualité, le Service s'engage dans une démarche d'amélioration continue. Il peut pour cela compter sur une équipe qualifiée et régulièrement formée composée de :",
+        "Neuf agents à domicile (aides à domicile ou auxiliaires de vie)",
+        "Un agent d'accueil et de coordination",
+        "Un travailleur social",
+        "Une directrice"
+      ],
+      "logo": "url",
+      "lien_site_internet": "www.ville-le-barp.fr"
+    }
+  ]
+}

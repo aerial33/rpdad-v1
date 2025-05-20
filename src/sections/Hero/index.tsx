@@ -1,6 +1,7 @@
 import HeroImgGrid from "./hero-img-grid"
 import { HeroLogo } from "./hero-logo"
 import { HeroMini } from "./hero-mini"
+import { Hero1 } from "./hero-one"
 import { HeroSplit } from "./hero-split"
 import HeroSplitImageForm from "./hero-split-image-form"
 
@@ -11,7 +12,7 @@ export type HeroVariant =
   | "split-image-form"
   | "mini"
   | "img-grid"
-
+  | "hero-on"
 // Type de base pour toutes les props communes aux composants Hero
 export type BaseHeroProps = {
   className?: string
@@ -30,7 +31,9 @@ export type HeroSelectorProps = BaseHeroProps & {
         title?: string
         description?: string
       }
-    | { variant: "logo" | "split" | "split-image-form" | "img-grid" }
+    | {
+        variant: "logo" | "split" | "split-image-form" | "img-grid" | "hero-on"
+      }
   )
 
 // Objet contenant toutes les variantes de Hero avec typage explicite
@@ -40,6 +43,7 @@ export const heroVariants: Record<HeroVariant, HeroComponentType> = {
   "split-image-form": HeroSplitImageForm as HeroComponentType,
   mini: HeroMini as HeroComponentType,
   "img-grid": HeroImgGrid as HeroComponentType,
+  "hero-on": Hero1 as HeroComponentType,
 }
 
 // Composant sélecteur de Hero
@@ -49,4 +53,4 @@ export const HeroSelector = ({ variant, ...props }: HeroSelectorProps) => {
 }
 
 // Exportation des composants individuels
-export { HeroImgGrid, HeroLogo, HeroMini, HeroSplit, HeroSplitImageForm }
+export { Hero1, HeroImgGrid, HeroLogo, HeroMini, HeroSplit, HeroSplitImageForm }

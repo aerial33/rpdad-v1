@@ -171,13 +171,13 @@ export const navRpdad: NavItem[] = [
         title: "Emplois",
         items: [
           {
-            label: "Postuler à un emploi",
-            description: "Postuler à un emploi",
-            href: "/emplois",
-          },
-          {
             label: "Rechercher un emploi",
             description: "Rechercher un emploi",
+            href: "/rechercher-un-emploi",
+          },
+          {
+            label: "Postuler à un emploi",
+            description: "Postuler à un emploi",
             href: "/emploi",
           },
         ],

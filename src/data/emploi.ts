@@ -4,14 +4,15 @@ interface Emploi {
   contrat: string
   temps: string
   service: string
-  description: string
-  profil: string
-  avantages: string
+  description: string[]
+  profil?: string
+  avantages?: string
   annonce?: string
+  url?: string
   image?: string
   contact: {
-    responsable: string
-    email: string
+    responsable?: string
+    email?: string
     telephone: string
     adresse: string
   }
@@ -20,25 +21,33 @@ interface Emploi {
 const Emplois: Emploi[] = [
   {
     id: "1",
-    titre: "AIDE A DOMICILE OU AUXILIAIRE DE VIE SOCIALE (H/F)",
-    contrat: "Contrat d'apprentissage",
-    temps: "30h/semaine",
-    service: "CIAS de Blaye",
-    description:
-      "Accompagnement quotidien, aide aux activités (repas, toilette, habillage, transferts) et maintien de la vie sociale.",
+    titre: "ADJOINT ADMINISTRATIF",
+    service: "CCAS de Belin Beliet",
+    contrat: "CDD mois",
+    temps: "Temps complet",
+    description: [
+      "Le CCAS de la commune recherche pour un remplacement de poste suite à un congé maladie au sein de son Service d’Aide à Domicile, un candidat(e) pour exercer les missions suivantes :",
+      "Encadrer les aides à domicile (recrutement, planning (logiciel APOLOGIC), suivi des dossiers du personnel...)",
+      "Réceptionner les demandes des bénéficiaires et évaluer leurs besoins.",
+      "Gérer la comptabilité du service",
+      "Gestion des dossiers des bénéficiaires du SAAD",
+      "Facturation des prestations",
+      "Gestion administrative générale ",
+    ],
     profil:
       "Formation DEAES en apprentissage. Qualités : Disponibilité, réactivité, discrétion et bonne communication.",
     avantages:
       "Travail en équipe, accompagnement continu, téléphone pro, frais kilométriques remboursés. Contrat d'un an, temps complet, poste à pourvoir le 9/09/24.",
     annonce: "Voir l'annonce complète",
+    url: "https://www.emploi-territorial.fr/offre/o033250407000505-adjoint-administratif/1/xzEa0PWH...pE,,,?pk_campaign=alerte",
     image:
       "https://sandbox-tailwind-template.netlify.app/assets/img/photos/co3@2x.png",
     contact: {
-      responsable: "M. BIDOIS",
-      email: "ccb@ccb-blaye.com",
-      telephone: "0557423333",
+      responsable: "",
+      email: "",
+      telephone: "05.56.88.81.51",
       adresse:
-        "Envoyez CV & lettre à M. le Président via ccb@ccb-blaye.com\nCIAS BLAYE – Maison des services au public, 32 rue des macons bp 154, 33391 Blaye cedex",
+        "N’hésitez pas à nous envoyer votre candidature à Mairie de Belin-Beliet à l’attention de monsieur le Président, 29 avenue Aliénor 33830 Belin-Beliet",
     },
   },
   {
@@ -47,8 +56,9 @@ const Emplois: Emploi[] = [
     contrat: "Contrat d'apprentissage",
     temps: "30h/semaine",
     service: "CIAS de Blaye",
-    description:
+    description: [
       "Accompagnement quotidien, aide aux activités (repas, toilette, habillage, transferts) et maintien de la vie sociale.",
+    ],
     profil:
       "Formation DEAES en apprentissage. Qualités : Disponibilité, réactivité, discrétion et bonne communication.",
     avantages:
@@ -69,8 +79,9 @@ const Emplois: Emploi[] = [
     contrat: "Contrat d'apprentissage",
     temps: "30h/semaine",
     service: "CIAS de Blaye",
-    description:
+    description: [
       "Accompagnement quotidien, aide aux activités (repas, toilette, habillage, transferts) et maintien de la vie sociale.",
+    ],
     profil:
       "Formation DEAES en apprentissage. Qualités : Disponibilité, réactivité, discrétion et bonne communication.",
     avantages:
