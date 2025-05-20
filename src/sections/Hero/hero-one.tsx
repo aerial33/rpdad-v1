@@ -47,7 +47,7 @@ const Hero1 = ({
 }: Hero1Props) => {
   return (
     <section className="from-flamingo-lighter to-chateau-lightest border-flamingo-lighter bg-gradient-to-br px-6 py-4 pb-0">
-      <div className="relative mx-auto max-w-7xl rounded-2xl py-8 lg:px-6 lg:shadow-md">
+      <div className="relative mx-auto rounded-2xl py-8 lg:px-6 lg:shadow-md">
         <div className="hidden sm:block">
           <DotPattern
             className="absolute top-10 -left-10"
