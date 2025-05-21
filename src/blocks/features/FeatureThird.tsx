@@ -39,7 +39,7 @@ function FeatureThird({
     <div className="w-full py-16 lg:py-20">
       <div className="container">
         <div
-          className={`mx-auto grid max-h-140 grid-cols-1 gap-8 overflow-auto rounded-lg p-8 lg:grid-cols-2 ${className}`}
+          className={`container mx-auto grid grid-cols-1 gap-8 rounded-lg p-8 lg:grid-cols-2 ${className}`}
         >
           <div
             className={`order-2 flex flex-col gap-10 ${imagePosition === "left" ? "lg:order-1" : ""}`}
@@ -49,10 +49,10 @@ function FeatureThird({
                 <Badge variant="outline">{badge}</Badge>
               </div> */}
               <div className="flex flex-col gap-2">
-                <h2 className="font-regular max-w-xl text-left text-3xl tracking-tighter lg:text-4xl">
+                <h2 className="font-regular max-w-xl text-left text-3xl tracking-tighter lg:text-5xl">
                   {title}
                 </h2>
-                <p className="text-muted-foreground max-w-xl text-left text-lg leading-relaxed tracking-tight">
+                <p className="text-muted-foreground max-w-xl text-left text-lg leading-relaxed tracking-tight text-balance">
                   {description}
                 </p>
               </div>
